@@ -1,0 +1,2 @@
+HSPLde/atelierlauncher/app/**;->**(**)**
+Lde/atelierlauncher/app/**;

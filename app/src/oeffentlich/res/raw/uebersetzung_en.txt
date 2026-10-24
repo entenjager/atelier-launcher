@@ -1,0 +1,1146 @@
+Eigenschaften · 	Properties · 
+Schrift	Font
+Schriftart	Typeface
+Wie im Design	As in design
+Stärke	Weight
+Dünn	Thin
+Normal	Normal
+Fett	Bold
+Kursiv	Italic
+Größe	Size
+Farbe	Color
+Schriftfarbe	Text color
+Akzentfarbe	Accent color
+Ausrichtung	Alignment
+Links	Left
+Mitte	Center
+Rechts	Right
+Uhr	Clock
+Datum	Date
+Akku	Battery
+Sekunden	Seconds
+App-Liste	App list
+Beim Wischen übers Alphabet	When swiping over the alphabet
+Jeder Buchstabe eine Seite	One page per letter
+Alle Apps, nur scrollen	All apps, just scroll
+Eine lange Liste mit allen Apps – das Alphabet springt an die Stelle	One long list of all apps – the alphabet jumps to the spot
+Nur die Apps des Buchstabens	Only the apps of that letter
+Icon-Stil	Icon style
+Icons	Icons
+Zeilenabstand	Line spacing
+Höchstens	At most
+{0} Favoriten	{0} favorites
+Termine	Events
+Wie viele	How many
+Welche	Which
+Alle	All
+Nur eigene	Only my own
+Suchen	Search
+Nur die Lupe	Just the magnifier
+Text (leer = „Apps suchen“)	Text (empty = “Search apps”)
+App-Knopf	App button
+Icon	Icon
+Webseite	Website
+Symbol	Symbol
+Alphabet	Alphabet
+Klack-Geräusch	Click sound
+Leiste zieht mit	Bar follows your thumb
+Form	Shape
+Automatisch	Automatic
+Ring	Ring
+Nur Zahl	Number only
+Musik	Music
+Titel anzeigen	Show title
+Titel und Künstler, wenn etwas läuft	Title and artist while something is playing
+Tastengröße	Button size
+Benachrichtigungen	Notifications
+Zahl anzeigen	Show count
+Linie	Line
+Dick	Thick
+Art	Style
+Durchgezogen	Solid
+Gestrichelt	Dashed
+Abstand zu den Bausteinen	Distance to the blocks
+Knopf	Button
+Beschriftung	Label
+Symbolgröße	Symbol size
+Fläche	Surface
+Hintergrund	Background
+Ecken	Corners
+Rund	Round
+Eckig	Square
+Rahmen	Frame
+Alles zurücksetzen	Reset everything
+Wieder wie im Design	Back to the design
+Fertig	Done
+Uhr & Datum	Clock & date
+App-Liste (Favoriten & Buchstaben)	App list (favorites & letters)
+E-Mails	E-mails
+Messenger	Messenger
+Taschenlampe	Flashlight
+Nicht stören	Do not disturb
+Ton / Vibration / Lautlos	Sound / vibrate / silent
+Kamera	Camera
+WLAN	Wi-Fi
+Nächster Termin	Next event
+Notiz	Note
+Diese Seite ist noch leer.\nEinstellungen → Seite bei # → „+ Baustein“	This page is still empty.\nSettings → Page at # → “+ Block”
+App wählen	Choose app
++ Baustein	+ Block
+Entfernen	Remove
+Startbildschirm #	Home screen #
+Auf # nach links (App-Liste)	Swipe left on # (app list)
+Sperrbildschirm	Lock screen
+Ziehen = verschieben · an den Ecken ziehen = Größe · antippen = Funktion	Drag = move · drag corners = size · tap = function
+Rahmen an den Ecken so groß ziehen, wie du willst – dann Bausteine hineinziehen. Wieder rausziehen geht genauso.	Drag the frame's corners to any size you like – then drag blocks into it. Dragging them out works the same way.
+Das Alphabet bleibt immer da – nur Platz und Größe sind frei.	The alphabet always stays – only its place and size are up to you.
+Benachrichtigungen von	Notifications from
+Noch keine App – antippen	No app yet – tap
+Benachrichtigungs-Zugriff erlauben	Allow notification access
+Nötig, damit Nachrichten hier erscheinen	Needed so messages show up here
+Funktion: App öffnen	Function: open app
+Beschriftung (leer = Name der App)	Label (empty = app name)
+Größe: {0} × {1} Felder	Size: {0} × {1} cells
+Wie am Anfang	Like at the start
+Alles auf die ursprüngliche Anordnung zurücksetzen	Reset everything to the original layout
+System	System
+Berechtigungen, Standard-Launcher, Statusleiste …	Permissions, default launcher, status bar …
+Alle Einstellungen	All settings
+Design, Alphabet, System …	Design, alphabet, system …
+Weitere Einstellungen	More settings
+Wetter, Geburtstage …	Weather, birthdays …
+Baustein hinzufügen	Add block
+{0} × {1} Felder	{0} × {1} cells
+Alles schon da	Everything's already there
+Benachrichtigungen von welcher App?	Notifications from which app?
+Apps suchen	Search apps
+Geht auf diesem Handy nicht	Doesn't work on this phone
+Keine Taschenlampe gefunden	No flashlight found
+Kamera ist gerade belegt	The camera is busy right now
+„{0}“ erlauben	Allow “{0}”
+Android hat „Nicht stören“ nicht umgeschaltet	Android didn't switch “Do not disturb”
+Nicht stören (Knopf)	Do not disturb (button)
+Vibration	Vibrate
+Lautlos	Silent
+Ton	Sound
+Keine Termine	No events
++ Termin	+ Event
+Heute	Today
+Morgen	Tomorrow
+In {0} Tagen	In {0} days
+Notiz – lange drücken → Bausteine → Text eintragen	Note – long press → blocks → enter text
+App-Liste · Favoriten (höchstens {0}), beim Wischen der Buchstabe	App list · favorites (at most {0}), the letter while swiping
+Adresse, z. B. wikipedia.org	Address, e.g. wikipedia.org
+Name (leer = Adresse)	Name (empty = address)
+Text der Notiz	Text of the note
+Beschriftung (leer = Standard)	Label (empty = default)
+Zugriff auf „Nicht stören“ erlauben	Allow access to “Do not disturb”
+Nötig, damit der Knopf schalten darf	Needed so the button can switch it
+(ohne Titel)	(no title)
+Klar	Clear
+Überwiegend klar	Mostly clear
+Teilweise bewölkt	Partly cloudy
+Bedeckt	Overcast
+Nebel	Fog
+Nieselregen	Drizzle
+Regen	Rain
+Schnee	Snow
+Regenschauer	Rain showers
+Schneeschauer	Snow showers
+Gewitter	Thunderstorm
+Willkommen bei {0}	Welcome to {0}
+Ein Startbildschirm, den du selbst baust: Uhr, Apps, Knöpfe und Anzeigen frei anordnen.	A home screen you build yourself: arrange clock, apps, buttons and displays freely.
+Damit die Home-Taste hierher führt, leg {0} als Startbildschirm fest.	So the home button leads here, set {0} as your home screen.
+✓  {0} ist dein Startbildschirm	✓  {0} is your home screen
+Als Startbildschirm festlegen	Set as home screen
+Für die Musik-Steuerung und den Baustein „Benachrichtigungen“ braucht {0} Zugriff auf Benachrichtigungen.	For the music controls and the “Notifications” block, {0} needs access to notifications.
+Alles bleibt auf deinem Handy. {0} schickt nichts irgendwohin und hat keine Werbung.	Everything stays on your phone. {0} doesn't send anything anywhere and has no ads.
+✓  Zugriff erlaubt	✓  Access allowed
+Zugriff erlauben	Allow access
+Du kannst das auch weglassen – dann gehen nur diese beiden Sachen nicht.	You can also skip this – then only these two things won't work.
+So geht's	How it works
+Lange auf den Startbildschirm drücken	Long-press the home screen
+Bausteine hinzufügen, verschieben, größer ziehen. ✎ = Eigenschaften	Add blocks, move them, make them bigger. ✎ = properties
+Über die Buchstaben wischen	Swipe over the letters
+Deine Apps nach Anfangsbuchstaben – loslassen, dann antippen	Your apps by first letter – let go, then tap
+Auf # nach links ziehen	Swipe left on #
+Deine eigene Seite mit Bausteinen	Your own page with blocks
+App nach rechts wischen oder lange drücken	Swipe an app to the right or long-press it
+Umbenennen, Icon ändern, Favorit, Deinstallieren	Rename, change icon, favorite, uninstall
+Einstellungen	Settings
+Im Baukasten unten „Alle Einstellungen“ – oder unter E im Alphabet	In the block editor at the bottom “All settings” – or under E in the alphabet
+Überspringen	Skip
+Weiter	Next
+Los geht's	Let's go
+Version {0}	Version {0}
+Datenschutz	Privacy
+Alles bleibt auf deinem Handy. {0} schickt keine Daten weg, hat keine Werbung und keine Analyse.	Everything stays on your phone. {0} sends no data anywhere, has no ads and no analytics.
+Fehler gefunden?	Found a bug?
+Sag dem Entwickler direkt Bescheid – es wird nichts automatisch gemeldet.	Tell the developer directly – nothing is reported automatically.
+Schriften	Fonts
+{0} – © {1}, SIL Open Font License 1.1	{0} – © {1}, SIL Open Font License 1.1
+Einführung nochmal zeigen	Show the introduction again
+Eigene Farbe	Custom color
+Farbton	Hue
+Sättigung	Saturation
+Helligkeit	Brightness
+Vorlagen · speichern · teilen – aktiv: 	Templates · save · share – active: 
+Farben	Colors
+Hell/dunkel, Farbschema, Akzent, Wellenfarbe	Light/dark, color scheme, accent, wave color
+Hintergrund & Tiefe	Background & depth
+ · 3D · Papier	 · 3D · paper
+Uhr & unter der Uhr	Clock & below the clock
+Größe, Stil, Farbe · Datum, Wetter, Akku, Termin, Musik	Size, style, color · date, weather, battery, event, music
+Schrift & Text	Font & text
+ · Überschriften	 · headings
+Apps & Icons	Apps & icons
+ · Listen, Ecken · Öffnen-Animation	 · lists, corners · opening animation
+Randgesten	Edge gestures
+Animation: 	Animation:
+Lautstärke-Regler	Volume slider
+Design: 	Design: 
+Hell oder dunkel	Light or dark
+Hell	Light
+Dunkel	Dark
+Wie Handy	Like phone
+Farbschema	Color scheme
+Weich	Soft
+Kontrast (Swiss)	Contrast (Swiss)
+Banknote	Banknote
+Gezeichnet	Drawn
+Tiefes Schwarz oder Papierweiß, keine Schatten	Deep black or paper white, no shadows
+Brauner Strick und Tintengrün – dunkel: Schokobraun mit hellen Linien	Brown string and ink green – dark: chocolate brown with light lines
+Schwarzer Marmor, Gold und Elfenbein – Risse werden mit Gold gekittet (Kintsugi) – immer dunkel	Black marble, gold and ivory – cracks are mended with gold (kintsugi) – always dark
+Blauer Kuli auf Papier: alles von Hand gezeichnet, nichts ist ganz gerade – dunkel: weiße Kreide auf schwarzer Tafel	Blue pen on paper: everything drawn by hand, nothing quite straight – dark: white chalk on a blackboard
+Glasflächen statt grauer Karten – mit Hintergrund „Glas“ (dein Foto) brechen sie es echt	Glass surfaces instead of grey cards – with the “Glass” background (your photo) they truly refract it
+Sanfte Töne mit leichtem Schatten	Soft tones with a light shadow
+Wellenfarbe	Wave color
+Für alle Wellen: Hintergrund, Wellen-Alphabet, Kreise, Randgesten, Lautstärke-Regler, Sperrbildschirm	For all waves: background, wave alphabet, circles, edge gestures, volume slider, lock screen
+Video wählen …	Choose video …
+MP4 – läuft stumm in Schleife	MP4 – plays muted in a loop
+Lottie-Datei wählen …	Choose Lottie file …
+JSON – der Daumen am Alphabet steuert sie	JSON – your thumb on the alphabet controls it
+Anderes Hintergrundbild …	Other wallpaper …
+Hintergrundbild wählen …	Choose wallpaper …
+Am besten dasselbe Bild wie dein Handy-Hintergrund – das Glas bricht genau dieses Bild	Best use the same picture as your phone wallpaper – the glass refracts exactly this picture
+Bild entfernen	Remove picture
+Dann wieder weiche Farbflächen	Back to soft color areas
+Farbe der Eis-Zacken	Color of the ice spikes
+Farbe der Pixel	Color of the pixels
+Zeigt den Akku	Shows the battery
+Leerer Akku = kürzere Wellen	Empty battery = shorter waves
+Schnee zwischen den Zacken	Snow between the spikes
+Auch auf den Startbildschirm-Hintergrund	Also as the home screen wallpaper
+Live-Hintergrund mit diesem Hintergrund	Live wallpaper with this background
+Tiefe	Depth
+3D beim Neigen	3D when tilting
+Uhr, Apps	Clock, apps
+ schweben über dem Hintergrund und verschieben sich, wenn du das Handy kippst	 float above the background and shift when you tilt the phone
+Papier (Test)	Paper (test)
+Papier-Struktur	Paper texture
+Feines Korn und Fasern wie echtes Papier – über allem, auch auf dem Sperrbildschirm	Fine grain and fibers like real paper – over everything, also on the lock screen
+Sperrbildschirm mit diesem Design	Lock screen with this design
+Wird beim Ausschalten des Bildschirms als Bild gesetzt – 	Set as a picture when the screen turns off – 
+hell oder dunkel wie hier	light or dark like here
+Hintergrund bewegt sich auf dem Sperrbildschirm	Background moves on the lock screen
+Zeigt den Live-Hintergrund statt eines Bildes – dafür unter Design → Hintergrund „Auch auf den Startbildschirm-Hintergrund“ einmal antippen	Shows the live wallpaper instead of a picture – for that tap “Also as the home screen wallpaper” once under Design → Background
+Geht nur bei Wellen, Eis, Pixel, Polar, Sterne und Swiss – bei diesem Hintergrund bleibt es ein Bild	Only works with waves, ice, pixel, polar, stars and Swiss – with this background it stays a picture
+Übergang	Transition
+Weitere Schriften (Handy, eigene Datei)	More fonts (phone, own file)
+Überschriften & Datum	Headings & date
+Schlicht	Plain
+VERSALIEN mit Sperrung, Balken davor, Uhr eng gesetzt	CAPITALS with spacing, bar in front, tight clock
+Rauten-Zier, Uhr im Oval-Rahmen, Karten mit Doppellinie	Diamond ornaments, clock in an oval frame, cards with a double line
+Normale kleine Überschriften	Normal small headings
+Stil	Style
+Die Original-Logos, nur als Linie	The original logos, just as lines
+Die Logos wie mit Kuli nachgezogen, in einem handgemalten Kreis	The logos traced with a pen, in a hand-drawn circle
+Goldring, darin das Logo – zerbrochen und mit Gold gekittet	Gold ring with the logo inside – broken and mended with gold
+Eigene eckige Zeichen statt der Logos	Own square symbols instead of the logos
+Logos in deiner Akzentfarbe	Logos in your accent color
+Ein farbiger Punkt statt Icon	A colored dot instead of an icon
+Nur die Namen	Just the names
+Die normalen App-Icons	The normal app icons
+Icon-Paket: 	Icon pack: 
+Icon-Pakete & einzelne Icons	Icon packs & single icons
+Formen & Listen	Shapes & lists
+App-Listen	App lists
+Einsatzliste	Operations list
+Nummern 01, 02 …, Trennlinien, Namen in Versalien	Numbers 01, 02 …, dividers, names in capitals
+Nur Icon und Name	Just icon and name
+Animation beim Öffnen von Apps	Animation when opening apps
+Sofort	Instant
+Aufklappen	Unfold
+Samsung	Samsung
+Keine Animation – die App ist sofort da.	No animation – the app is there instantly.
+Die App wächst aus der angetippten Zeile heraus. Wie schnell, bestimmen die Animations-Faktoren in den Entwickleroptionen.	The app grows out of the tapped row. How fast is set by the animation scales in the developer options.
+Bewegung	Motion
+Welle (Bogen)	Wave (arc)
+Feste Leiste	Fixed bar
+Buchstaben weichen dem Daumen im Bogen aus	Letters move aside for your thumb in an arc
+Leiste bleibt stehen, nur der Buchstabe wird markiert	The bar stays put, only the letter is highlighted
+Anzeige neben dem Daumen	Shown next to your thumb
+Großer Buchstabe	Big letter
+Karte (A B [C] D E)	Card (A B [C] D E)
+Ein großer Buchstabe	One big letter
+Der Buchstabe groß im Farbfeld, darüber und darunter die Nachbarn	The letter big in a colored field, its neighbors above and below
+Buchstaben	Letters
+Platz und Größe	Place and size
+Lange auf den Startbildschirm drücken → Alphabet-Baustein ziehen	Long-press the home screen → drag the alphabet block
+Höhe	Height
+ (ganz)	 (full)
+ (unten)	 (bottom)
+Dicke	Thickness
+Abstand unten	Distance from bottom
+Dicke = wie breit die Fläche zum Wischen ist	Thickness = how wide the swipe area is
+Daumen über das A hinaus = Alphabet wandert mit nach oben (und wieder runter), beim Loslassen zurück	Thumb past the A = the alphabet moves up with it (and back down), returns when you let go
+Buchstaben 100 %, Höhe 100 %, Dicke 36 dp, Abstand 24 dp	Letters 100 %, height 100 %, thickness 36 dp, distance 24 dp
+Beim Wischen	While swiping
+Hintergrund am Daumen	Background at your thumb
+Welle	Wave
+Swiss-Kante	Swiss edge
+Rosette	Rosette
+Eine Guilloche-Rosette blüht am Daumen auf und dreht sich – weiter ziehen = größer	A guilloche rosette blooms at your thumb and spins – drag further = bigger
+Felder im Raster ploppen vom Rand auf Höhe des Daumens auf – weiter ziehen = weiter rein	Grid cells pop up from the edge at thumb height – drag further = further in
+Die Welle am Rand reagiert auf den Daumen	The wave at the edge reacts to your thumb
+Feine Linie auf Höhe des Daumens	Thin line at thumb height
+Wellen folgen dem Daumen	Waves follow your thumb
+Die Wellen am Rand kommen beim Wischen weiter herein	The waves at the edge come further in while swiping
+Leises Klicken bei jedem Buchstaben (auch wenn die Berührungstöne von Android aus sind)	Soft click on every letter (even if Android's touch sounds are off)
+Kreise beim Wischen	Circles while swiping
+Kleine Kreiswellen, wo der Daumen das Alphabet berührt – in der Wellenfarbe	Small ripples where your thumb touches the alphabet – in the wave color
+Im Liegen	Lying down
+Alphabet nach links	Alphabet on the left
+Auf der rechten Seite liegen (80–100°) → Alphabet und Design links	Lying on your right side (80–100°) → alphabet and design on the left
+Gerade: 	Right now: 
+Alphabet links	Alphabet left
+Animation beim Reinwischen	Animation when swiping in
+Gesten & Griffe einstellen	Set up gestures & handles
+Was welche Geste macht, Größe und Lage der Griffe	What each gesture does, size and position of the handles
+Design	Design
+Die Vorschau kannst du mit dem Finger hoch- und runterziehen. Bedienung und Verhalten bleiben bei jedem Design gleich.	You can drag the preview up and down with your finger. Controls and behavior stay the same in every design.
+Regler einstellen	Set up slider
+Ein/aus, Feinbereich	On/off, fine range
+Uhr anpassen	Customize clock
+Größe, Stil, Farbe, Sekunden	Size, style, color, seconds
+Original	Original
+Umriss	Outline
+Piktogramme	Pictograms
+Einfarbig	Monochrome
+Nur Motiv (s/w)	Motif only (b/w)
+Punkte	Dots
+Keine	None
+Vorlagen	Templates
+Meine Themes	My themes
+Löschen	Delete
+Aktuelles Aussehen speichern	Save current look
+Name des Themes	Theme name
+Speichern	Save
+Abbrechen	Cancel
+Teilen	Share
+Theme-Code kopieren	Copy theme code
+Schick den Code z. B. per WhatsApp an Freunde	Send the code to friends, e.g. via WhatsApp
+Theme-Code kopiert	Theme code copied
+Theme aus Zwischenablage einfügen	Paste theme from clipboard
+Code kopieren, dann hier tippen	Copy the code, then tap here
+Kein Theme-Code in der Zwischenablage	No theme code in the clipboard
+Theme „{0}“ übernommen	Theme “{0}” applied
+Community-Themes laufen ohne Server und ohne Konto: Ein Theme ist ein kurzer Code. 	Community themes work without a server and without an account: a theme is a short code. 
+Wer ihn einfügt, bekommt genau dein Aussehen (Farben, Hintergrund, Schrift, Icons, Uhr).	Whoever pastes it gets exactly your look (colors, background, font, icons, clock).
+Swiss-Piktogramme	Swiss pictograms
+Icon-Paket	Icon pack
+Eigene Schrift laden (.ttf / .otf)	Load own font (.ttf / .otf)
+Suche Schriften …	Looking for fonts …
+Alle Icons in deiner Akzentfarbe (wie Anycons / Themed Icons)	All icons in your accent color (like Anycons / themed icons)
+Ein farbiger Punkt statt Icon (wie Niagara Dots)	A colored dot instead of an icon (like Niagara dots)
+Nur Namen, ganz schlicht	Just names, very plain
+Die Original-Logos, nur als Linie gezeichnet	The original logos, drawn just as lines
+Icon-Pakete	Icon packs
+Suche …	Searching …
+Keine Icon-Pakete installiert. Kostenlos: „Arcticons“ (Linien-Icons, ähnlich Anycons), 	No icon packs installed. Free: “Arcticons” (line icons, similar to Anycons), 
+„Lawnicons“ oder „Delta“ aus dem Play Store bzw. F-Droid. Danach erscheinen sie hier.	“Lawnicons” or “Delta” from the Play Store or F-Droid. Then they show up here.
+Icon-Assistent	Icon assistant
+Einzelnes Icon ändern: App nach rechts wischen → „Icon ändern“. Dort kannst du aus jedem 	Change a single icon: swipe the app to the right → “Change icon”. There you can pick any picture from any 
+Icon-Paket ein beliebiges Bild wählen oder zum Original zurück.	icon pack or go back to the original.
+Alle eigenen Icons zurücksetzen	Reset all custom icons
+{0} geändert	{0} changed
+Dienst in den Bedienungshilfen	Service in accessibility
+Eingeschaltet ✓	On ✓
+Vom Rand reinwischen = Aktion	Swipe in from the edge = action
+Vibrieren	Vibrate
+Von unten wischen = Startbildschirm	Swipe up from the bottom = home screen
+Ruht gerade: Samsungs Wischgesten sind an – sonst ginge der Startbildschirm doppelt auf. Wirkt nur mit Samsungs Tasten-Leiste	Paused: Samsung's swipe gestures are on – otherwise the home screen would open twice. Only works with Samsung's button bar
+Sofort, schon nach einem kurzen Stück nach oben – ohne Animation. Tippen auf die Leiste geht weiter	Instantly, after just a short way up – without animation. Tapping the bar still works
+Animation	Animation
+ – unter Design	 – under Design
+Auf dem Startbildschirm aus	Off on the home screen
+Damit das Alphabet am Rand frei bleibt	So the alphabet at the edge stays free
+In diesen Apps aus	Off in these apps
+{0} App(s)	{0} app(s)
+Links und rechts gleich	Left and right the same
+Eine Einstellung für beide Seiten (gespiegelt) – alles nur einmal einstellen	One setting for both sides (mirrored) – set everything up only once
+Randgeste	Edge gesture
++ Neue Randgeste	+ New edge gesture
+Zum Beispiel unten in den Ecken – Größe und Aktionen frei wählbar	For example in the bottom corners – size and actions freely selectable
+Griff	Handle
+Rand	Edge
+Unten in den Ecken	In the bottom corners
+Griff 	Handle 
+unten links und rechts	bottom left and right
+links und rechts	left and right
+am 	on the 
+ Rand	 edge
+Position	Position
+ (übers linke Ende)	 (past the left end)
+ (übers obere Ende)	 (past the top end)
+ (übers rechte Ende)	 (past the right end)
+ (übers untere Ende)	 (past the bottom end)
+ von links	 from the left
+Breite der Ecken	Width of the corners
+{0} % vom Bildschirm	{0} % of the screen
+ (je Ecke)	 (per corner)
+Höhe der Ecken	Height of the corners
+Breite	Width
+Animation kommt von	Animation comes from
+Der Seite (links / rechts)	The side (left / right)
+Der Seite	The side
+Unten	Bottom
+Sichtbarkeit	Visibility
+100 % durchsichtig	100 % transparent
+{0} % (extra breit)	{0} % (extra wide)
+Gesten 	Gestures 
+in den unteren Ecken	in the bottom corners
+ · gesperrt	 · locked
+Wie normal: 	As normal: 
+Alles wie normal	Everything as normal
+Sperrbildschirm-Belegung für diesen Rand löschen	Delete lock screen assignment for this edge
+Diese Randgeste löschen	Delete this edge gesture
+Nr. 	No. 
+ mit allen Einstellungen	 with all settings
+So funktioniert's	How it works
+Vom Griff aus ins Bild wischen: gerade, schräg nach oben oder schräg nach unten (untere Ecken: gerade hoch, schräg zur Mitte oder flach zur Mitte – links und rechts gleich). 	Swipe from the handle into the screen: straight, diagonally up or diagonally down (bottom corners: straight up, diagonally to the center or flat to the center – left and right the same).
+Mit „+ Neue Randgeste“ legst du beliebig viele an – jede mit eigenem Rand, eigener Größe und eigenen Aktionen. Sobald du ein Fünftel 	With “+ New edge gesture” you can create as many as you like – each with its own edge, size and actions. As soon as you're a fifth 
+der Breite drin bist, passiert die Aktion – ohne Loslassen. Vorher loslassen = abbrechen.\n\n	of the width in, the action happens – without letting go. Letting go earlier = cancel.\n\n
+Solange diese Seite offen ist, siehst du die Berührfläche blau markiert – auch wenn der Griff 100 % durchsichtig ist. Alle Regler lassen sich um 10 % übersteuern.\n\n	While this page is open you see the touch area marked in blue – even if the handle is 100 % transparent. All sliders can be overdriven by 10 %.\n\n
+Wenn Samsungs Wischgesten „Von der Seite und unten wischen“ an sind, kann sich das mit dem Zurück-Wisch beißen. 	If Samsung's swipe gestures “Swipe from sides and bottom” are on, this can clash with the back swipe. 
+Dann den Griff nur auf einen Teil der Höhe legen oder bei Samsung „Von unten wischen“ nehmen.	Then put the handle on only part of the height, or use “Swipe from bottom” in Samsung's settings.
+Aktion wählen	Choose action
+App öffnen …	Open app …
+Randgesten aus in …	Edge gestures off in …
+Unter der Uhr anzeigen	Show below the clock
+Kalender-Zugriff fehlt – antippen	Calendar access missing – tap
+Wetter	Weather
+Unten einen Ort festlegen	Set a place below
+Benachrichtigungszugriff fehlt – antippen	Notification access missing – tap
+Eigene Termine	My events
+ · antippen zum Löschen	 · tap to delete
++ Termin eintragen	+ Add event
+Erscheint am Tag oben unter dem Datum	Shows up on that day at the top under the date
+Wetter unter der Uhr	Weather below the clock
+Nichts gefunden	Nothing found
+Keine Verbindung zum Wetterdienst	No connection to the weather service
+Ort für das Wetter	Place for the weather
+Noch kein Ort festgelegt	No place set yet
+Stadt suchen, z. B. Berlin	Search a city, e.g. London
+Ort entfernen	Remove place
+Wetterdaten: Open-Meteo.com (kostenlos, ohne Konto). Dorthin gehen nur der Suchbegriff bzw. die Koordinaten des Orts.	Weather data: Open-Meteo.com (free, no account). Only the search term or the place's coordinates go there.
+Startbildschirm	Home screen
+ ist der Startbildschirm ✓	 is the home screen ✓
+Noch nicht festgelegt – App-Kurzbefehle im Pop-up gehen erst danach	Not set yet – app shortcuts in the pop-up only work after that
+Kalender	Calendar
+Erlaubt ✓	Allowed ✓
+Nicht erlaubt – für den nächsten Termin unter der Uhr	Not allowed – for the next event below the clock
+Musik (Benachrichtigungszugriff)	Music (notification access)
+Nicht erlaubt – für Musik und „Nicht stören“	Not allowed – for music and “Do not disturb”
+Wofür? Damit der Launcher die laufende Musik anzeigen und „Nicht stören“ schalten kann. 	What for? So the launcher can show the music playing and switch “Do not disturb”. 
+Eigene Skripte können mit handy.nachrichten() neue Benachrichtigungen einer App lesen. 	Own scripts can read new notifications of an app with handy.nachrichten(). 
+Alles bleibt auf dem Handy – nichts wird gespeichert oder verschickt. 	Everything stays on the phone – nothing is stored or sent. 
+Antippen öffnet die Android-Einstellung, dort den Launcher einschalten.	Tapping opens the Android setting, turn the launcher on there.
+App-Info des Launchers	Launcher app info
+Falls Android nicht mehr nachfragt	In case Android doesn't ask anymore
+Diagnose Nachrichten	Message diagnostics
+Antippen = neu prüfen	Tap = check again
+Prüfe …	Checking …
+Zugriff erlaubt: 	Access allowed: 
+NEIN	NO
+Dienst verbunden: 	Service connected: 
+Empfangen seit Start: 	Received since start: 
+Startbildschirm: 	Home screen: 
+Lesen ging nicht: 	Reading failed: 
+Aktive Benachrichtigungen: 	Active notifications: 
+ Einträge  	 entries  
+Klassisch	Classic
+Groß	Big
+Untereinander	Stacked
+Mittig	Centered
+Klein	Small
+Stile	Styles
+Größe: {0}	Size: {0}
+Strichstärke	Stroke weight
+Sekunden anzeigen	Show seconds
+Datum anzeigen	Show date
+Akku anzeigen	Show battery
+Stunden und Minuten untereinander	Hours and minutes stacked
+Die Schrift der Uhr kommt aus Einstellungen → Schrift.	The clock's font comes from Settings → Font.
+Alphabet & Menü	Alphabet & menu
+Hintergrund-Code	Background code
+Alphabet-Code (JavaScript)	Alphabet code (JavaScript)
+Berechtigungen	Permissions
+Code & Knopf	Code & button
+Seite bei #	Page at #
+Über {0}	About {0}
+Zurück	Back
+Wird ausgeführt, wenn du auf # zur Seite wischst.	Runs when you swipe to the page at #.
+Wellen	Waves
+Eis-Zacken	Ice spikes
+Sternenhimmel	Starry sky
+Polarlicht	Northern lights
+Glas · dein Foto	Glass · your photo
+Papier	Paper
+Marmor	Marble
+Eigener Code	Own code
+Handy-Hintergrund	Phone wallpaper
+Alles, was man sieht: Farben, Hintergrund, Uhr, Icons, Randgesten, Lautstärke, Sperrbildschirm	Everything you see: colors, background, clock, icons, edge gestures, volume, lock screen
+Bausteine, Favoriten, Knöpfe, Anzeigen	Blocks, favorites, buttons, displays
+Aussehen, Wischen	Look, swiping
+Auf # nach links: erscheint in der App-Liste	Swipe left on #: shows up in the app list
+Vom Rand reinwischen	Swipe in from the edge
+Erweiterung – noch nicht geladen	Extension – not loaded yet
+Version, Datenschutz, Schriften, Einführung	Version, privacy, fonts, introduction
+Unter der Uhr	Below the clock
+Unten „Ort für das Wetter“ festlegen	Set “Place for the weather” below
+Titel mit Pause/Vor/Zurück	Title with pause/next/back
+Titel mit Pause/Vor/Zurück – braucht den Benachrichtigungszugriff (nur für die Musik-Anzeige, nichts verlässt das Handy)	Title with pause/next/back – needs notification access (only for the music display, nothing leaves the phone)
+Auf # nach links wischen: {0} dp	Swipe left on #: {0} dp
+Kurz = geht schnell auf, aber auch mal aus Versehen	Short = opens quickly, but sometimes by accident
+Anzeige	Display
+Statusleiste oben ausblenden	Hide the status bar at the top
+Uhrzeit, Akku und Symbole ganz oben weg – von oben wischen zeigt sie kurz	Time, battery and symbols at the very top gone – swipe down from the top to show them briefly
+Bedienung	Controls
+Eigener Regler ✓	Own slider ✓
+Aus	Off
+Einhand-Bedienung: vom Rand reinwischen	One-handed: swipe in from the edge
+ · an ✓	 · on ✓
+ · aus	 · off
+Apps öffnen	Opening apps
+Sofort bei Berührung öffnen	Open instantly on touch
+An: Favoriten starten schon beim Antippen (nach 25 ms ruhigem Finger) – lang drücken auf Favoriten geht dann nicht	On: favorites start as soon as you touch them (after 25 ms of a still finger) – long-pressing favorites won't work then
+Aus: Apps starten erst beim Loslassen – lang drücken auf Favoriten geht wieder	Off: apps start when you let go – long-pressing favorites works again
+Zugriffe	Access
+Kalender, Benachrichtigungen, Diagnose	Calendar, notifications, diagnostics
+Noch nicht festgelegt	Not set yet
+Startbildschirm-App	Home screen app
+„{0}“ auswählen	Select “{0}”
+  (dieser)	  (this one)
+Randgesten & Lautstärke	Edge gestures & volume
+Vom Bildschirmrand reinwischen für Zurück, Home, Apps und mehr – mit Animationen passend zum Theme. 	Swipe in from the screen edge for back, home, apps and more – with animations matching the theme. 
+Dazu ein eigener Lautstärke-Regler im gleichen Stil.	Plus its own volume slider in the same style.
+Wird geladen …	Loading …
+Erweiterung laden	Load extension
+Geladen und eingeschaltet ✓	Loaded and on ✓
+Geladen – jetzt noch in den Bedienungshilfen einschalten	Loaded – now turn it on in accessibility
+Einschalten	Turn on
+Januar	January
+Februar	February
+März	March
+Mai	May
+Juni	June
+Juli	July
+Oktober	October
+Dezember	December
+ · jedes Jahr	 · every year
+jedes Jahr	every year
+Was und wann (z. B. 20.11) eintragen	Enter what and when (e.g. 20.11)
+Termin eintragen	Add event
+Was? z. B. Geburtstag von Max, Zahnarzt	What? e.g. Max's birthday, dentist
+Wann? 20.11 = jedes Jahr, 20.11.2026 = einmal	When? 20.11 = every year, 20.11.2026 = once
+{0} ({1}) löschen?	Delete {0} ({1})?
+Behalten	Keep
+Eisblau	Ice blue
+Gletscher	Glacier
+Weiß	White
+Lila	Purple
+Rosa	Pink
+Grün	Green
+Neon-Grün	Neon green
+Pille	Pill
+Glas	Glass
+Blasen	Bubbles
+Nacht	Night
+Kristall	Crystal
+Abend	Evening
+Segmente	Segments
+Schwarz & Weiß	Black & White
+LAUT	VOLUME
+Bitte unter Berechtigungen → Kalender erlauben	Please allow calendar under Permissions
+Übernommen	Applied
+Datei ließ sich nicht lesen	The file couldn't be read
+„{0}“ einschalten	Turn on “{0}”
+Kurzbefehl geht gerade nicht	Shortcut doesn't work right now
+Wellen Nacht	Waves Night
+Nur Wellen	Only waves
+Nur Swiss-Kanten	Only Swiss edges
+Kreidetafel	Chalkboard
+Swiss Papier	Swiss Paper
+Wellen Tag	Waves Day
+Favorit ✓	Favorite ✓
+Zu Favoriten	Add to favorites
+Höchstens {0} Favoriten	At most {0} favorites
+Nach oben	Move up
+Nach unten	Move down
+Umbenennen	Rename
+Icon ändern	Change icon
+Apps bündeln	Bundle apps
+App-Info	App info
+Deinstallieren	Uninstall
+Name	Name
+Originalname: {0}	Original name: {0}
+Original verwenden	Use original
+Suche Icon-Pakete …	Looking for icon packs …
+Kein Icon-Paket installiert.\n\nIcon-Pakete sind normale Apps. Kostenlos und schön sind z. B. 	No icon pack installed.\n\nIcon packs are normal apps. Free and nice ones are e.g. 
+„Arcticons“ (feine Linien, ähnlich Anycons), „Lawnicons“ oder „Delta“ – im Play Store oder bei F-Droid. 	“Arcticons” (thin lines, similar to Anycons), “Lawnicons” or “Delta” – in the Play Store or on F-Droid. 
+Danach hier wieder öffnen.	Then open this again.
+Icon suchen	Search icon
+{0} ausgewählt	{0} selected
+}“, z. B. Kamera + Galerie.	”, e.g. camera + gallery.
+Schließen	Close
+Apps auswählen	Choose apps
+Bausteine hineinziehen	Drag blocks in here
+Gerade	Straight
+Schräg hoch	Diagonally up
+Schräg runter	Diagonally down
+Nichts	Nothing
+Letzte Apps	Recent apps
+Vorherige App	Previous app
+Schnelleinstellungen	Quick settings
+Bildschirm sperren	Lock screen
+Geteilter Bildschirm	Split screen
+Ausschalt-Menü	Power menu
+App	App
+App (nicht mehr da)	App (no longer there)
+untere Ecken	bottom corners
+Links & rechts	Left & right
+⤢  Schräg zur Mitte	⤢  Diagonally to the center
+↔  Flach zur Mitte	↔  Flat to the center
+↑  Gerade hoch	↑  Straight up
+Wassertropfen	Water drop
+Strich (schlicht)	Line (plain)
+Kante	Edge
+Pfeil	Arrow
+Große Welle	Big wave
+Swiss-Linien	Swiss lines
+Swiss-Felder	Swiss cells
+Gezeichnete Kanten	Drawn edges
+Kintsugi-Risse	Kintsugi cracks
+Keine Animation	No animation
+Wie ein Tropfen auf Glas – der Bildschirm wird dahinter gekrümmt	Like a drop on glass – the screen behind it bends
+Marmor reißt vom Rand her auf, die Risse füllen sich mit Gold – beim Auslösen bricht das Stück heraus und fällt	Marble cracks open from the edge, the cracks fill with gold – when triggered the piece breaks off and falls
+Wie die Swiss-Linien, aber mit Kuli gezeichnet: schiefe Kanten, geschlossene Vierecke mit Papier gefüllt	Like the Swiss lines, but drawn with a pen: crooked edges, closed boxes filled with paper
+Pfeil vom Rand herein – zeigt gerade, schräg hoch oder schräg runter, je nach Geste	Arrow coming in from the edge – points straight, diagonally up or down depending on the gesture
+Block in der Akzentfarbe mit harter Kante	Block in the accent color with a hard edge
+Wellenkante läuft mit dem Finger bis zu einem Fünftel rein und wird dabei durchsichtiger. Bei Home sieht man dahinter den Startbildschirm	Wave edge follows your finger up to a fifth of the way in and gets more transparent. For home you see the home screen behind it
+Rasterlinien wie im Swiss-Hintergrund tauchen zufällig auf	Grid lines like in the Swiss background appear randomly
+Felder im Swiss-Raster ploppen zufällig auf – bei Home mit dem Startbildschirm darin	Cells in the Swiss grid pop up randomly – for home with the home screen inside
+Ein verziertes Banknoten-Band fährt vom Rand rein – dahinter Guilloche-Papier bzw. der Startbildschirm	An ornate banknote band slides in from the edge – behind it guilloche paper or the home screen
+Schlichte Welle mit Linie	Plain wave with a line
+Randgeste {0}	Edge gesture {0}
+Nachricht	Message
+Lädt …	Loading …
+Keine Stunden	No lessons
+in {0} T.	in {0} d
+Nichts geplant	Nothing planned
+Zugriff fehlt – antippen	Access missing – tap
+Play = Heruntergeladen	Play = downloaded
+Geht nur, wenn der Launcher der Startbildschirm ist	Only works when the launcher is the home screen
+Keine Chats gefunden – {0} einmal öffnen und zurück	No chats found – open {0} once and come back
+{0} T	{0} d
+Lange drücken → Bausteine hinzufügen	Long press → add blocks
+Rechts über die Buchstaben wischen.\nApp nach rechts wischen oder lange drücken → Pop-up.\n	Swipe over the letters on the right.\nSwipe an app to the right or long-press it → pop-up.\n
+Nach oben wischen = Suche, nach unten = 	Swipe up = search, down = 
+, Einstellungen unter E.	, settings under E.
+FAVORITEN	FAVORITES
+Über die Buchstaben wischen.\nApp nach rechts wischen oder lange drücken → Pop-up.\n	Swipe over the letters.\nSwipe an app to the right or long-press it → pop-up.\n
+Auf # nach links = 	Swipe left on # = 
+. Lange auf den Startbildschirm drücken = Bausteine.	. Long-press the home screen = blocks.
+Heute: 	Today: 
+Dein Hintergrundbild ins Glas	Your wallpaper in the glass
+Tippen und dasselbe Bild wie dein Handy-Hintergrund wählen	Tap and pick the same picture as your phone wallpaper
+HEUTE	TODAY
+MORGEN	TOMORROW
+Standard	Default
+Grotesk (Swiss)	Grotesque (Swiss)
+Schreibschrift	Script
+Handschrift (Kuli)	Handwriting (pen)
+Futur, breit (Michroma)	Futuristic, wide (Michroma)
+Eigene: 	Own: 
+Mein Theme	My theme
+Weitere Designs	More designs
+Ab Werk ist nur „Schwarz & Weiß“ dabei. Jedes Design lädst du einmal – es bringt seine Themes mit, dazu passende Icons, Schrift, Hintergrund und mehr. Nichts wird aus dem Internet geladen.	Out of the box only “Black & White” is included. Load each design once – it brings its themes along with matching icons, font, background and more. Nothing is downloaded from the internet.
+Swiss	Swiss
+Art Déco	Art Déco
+Minimal	Minimal
+Weiche Wellen im Hintergrund und am Alphabet – dazu Wellen als Randgeste, beim Sperrbildschirm und am Lautstärke-Regler. Mit Umriss-Icons.	Soft waves in the background and at the alphabet – plus waves for edge gestures, the lock screen and the volume slider. With outline icons.
+Strenges Raster, Grotesk-Schrift und ein kräftiges Rot – mit eigenen eckigen Piktogrammen als Icons.	Strict grid, grotesque type and a strong red – with its own square pictograms as icons.
+Blauer Kuli auf Papier – oder weiße Kreide auf der Tafel. Nichts ist ganz gerade. Mit handgezeichneten Icons und Handschrift.	Blue pen on paper – or white chalk on a blackboard. Nothing is quite straight. With hand-drawn icons and handwriting.
+Schwarzer Marmor, Gold und Elfenbein – Risse werden mit Gold gekittet. Mit Kintsugi-Icons und Art-Déco-Schrift.	Black marble, gold and ivory – cracks are mended with gold. With kintsugi icons and an Art Déco font.
+Schwarzer Grund, kleine Uhr, keine Icons – nur die Namen der Apps.	Black background, small clock, no icons – just the app names.
+Überschriften	Headings
+Alphabet-Anzeige	Alphabet display
+Daumen-Effekt	Thumb effect
+Sperr-Übergang	Lock transition
+Bringt mit: 	Includes: 
+Geladen ✓	Loaded ✓
+Erst laden, dann antippen zum Benutzen	Load it first, then tap to use
+Laden	Load
+Benutzen	Use
+Wird gerade benutzt – erst ein anderes Theme wählen (z. B. „Schwarz & Weiß“)	In use right now – pick another theme first (e.g. “Black & White”)
+Vorlagen · weitere Designs laden · teilen – aktiv: {0}	Templates · load more designs · share – active: {0}
+Vorlagen · speichern · teilen – aktiv: {0}	Templates · save · share – active: {0}
+Nur Schwarz und Weiß – keine Grautöne, keine Schatten	Only black and white – no grays, no shadows
+Nur das Motiv in Schwarz bzw. Weiß, ohne Hintergrund	Only the motif in black or white, without background
+Nur das, was auf dem Icon abgebildet ist – schwarz bzw. weiß, ohne Hintergrund	Only what the icon shows – black or white, without background
+Weitere Icon-Stile kommen mit ihrem Design: Design → Themes → Weitere Designs	More icon styles come with their design: Design → Themes → More designs
+Gelöscht	Deleted
+Zeile	Line
+Anleitung	Guide
+So baust du einen eigenen Baustein	How to build your own block
+Antippen zum Zuklappen	Tap to collapse
+4 Schritte – antippen zum Aufklappen	4 steps – tap to expand
+Neuer Baustein	New block
+Unten „Neuer Baustein“ antippen. Er startet mit einem kleinen Beispiel, das du ändern kannst.	Tap “New block” below. It starts with a small example you can change.
+Code einfügen	Paste code
+Ein Baustein ist eine kleine Webseite: HTML für den Inhalt, <style> für das Aussehen, <script> für alles, was sich bewegt oder rechnet. Code aus dem Netz einfach ins Feld kopieren – oder „Aus Datei …“.	A block is a small web page: HTML for the content, <style> for the look, <script> for anything that moves or calculates. Just paste code from the web into the field – or use “From file …”.
+Vorschau ansehen	Check the preview
+Die Vorschau über dem Code zeigt sofort, wie er aussieht – in der Größe auf dem Startbildschirm. Fehler im Code stehen darunter.	The preview above the code shows right away how it looks – at its home screen size. Errors in the code appear below it.
+Platzieren	Place it
+„Speichern“ – dann lange auf den Startbildschirm drücken → „+ Baustein“ → unter „Eigene Bausteine“ antippen. Größe und Platz wie bei jedem Baustein.	“Save” – then long-press the home screen → “+ Block” → tap it under “Own blocks”. Size and position work like any other block.
+Farben vom Design	Colors from the design
+Mit var(--text), var(--leise), var(--akzent), var(--karte) und var(--linie) passt dein Baustein immer zum Design – auch wenn du es wechselst. Der Hintergrund ist durchsichtig.	With var(--text), var(--leise), var(--akzent), var(--karte) and var(--linie) your block always matches the design – even when you switch it. The background is transparent.
+Werte merken	Remembering values
+localStorage.setItem('name', wert) speichert etwas im Baustein (z. B. einen Zählerstand) – es bleibt auch nach einem Neustart.	localStorage.setItem('name', value) stores something in the block (e.g. a counter) – it stays after a restart.
+Sicher	Safe
+Ein eigener Baustein läuft abgeschottet: Er sieht keine Apps, Nachrichten, Termine oder Einstellungen des Launchers. Ins Internet darf er nur, wenn du es bei ihm erlaubst. Links öffnen im Browser.	An own block runs sealed off: it can't see the launcher's apps, messages, events or settings. It may only go online if you allow it for that block. Links open in the browser.
+Meine Bausteine	My blocks
+Noch keine eigenen Bausteine.	No own blocks yet.
+{0} × {1} Felder · Internet erlaubt	{0} × {1} cells · internet allowed
+</> · {0} × {1} Felder	</> · {0} × {1} cells
+Mein Baustein	My block
+Zum Startbildschirm-Baukasten	To the home screen builder
+Dort „+ Baustein“ → Eigene Bausteine	There “+ Block” → Own blocks
+Dieser Baustein wurde gelöscht.	This block was deleted.
+Speichern ●	Save ●
+Gespeichert ✓	Saved ✓
+Gespeichert	Saved
+Beispiel …	Example …
+Aus Datei …	From file …
+Nochmal tippen = löschen	Tap again = delete
+Vorschau	Preview
+Felder	cells
+Die Größe gilt beim Hinzufügen – danach im Baukasten an den Ecken ziehen.	The size applies when adding – afterwards drag the corners in the builder.
+Internet erlauben	Allow internet
+Nur nötig, wenn dein Code Daten oder Bilder aus dem Netz holt. Aus = alles bleibt auf dem Handy.	Only needed if your code fetches data or images from the web. Off = everything stays on the phone.
+Code (HTML, CSS, JavaScript)	Code (HTML, CSS, JavaScript)
+Beispiel nehmen	Use an example
+Ersetzt den Code und die Größe.	Replaces the code and the size.
+Eigener Baustein	Own block
+Eigene Bausteine	Own blocks
+Code bearbeiten	Edit code
+Eigener Baustein – im Baukasten nur als Platzhalter	Own block – shown as a placeholder in the builder
+Eigenen Baustein bauen …	Build your own block …
+Mit Anleitung – aus HTML, CSS und JavaScript	With a guide – from HTML, CSS and JavaScript
+Selbst bauen – mit Anleitung	Build your own – with a guide
+Selbst bauen – kleine Anleitung, Code einfügen, Vorschau	Build your own – short guide, paste code, preview
+Von … bis … – ändern nur mit dem jetzigen Code	From … to … – change only with the current code
+Von … bis … festlegen	Set from … to …
+Von	From
+Bis	To
+Von – Buchstabe(n), einer davon reicht	From – letter(s), any one of them is enough
+Bis – dort loslassen (Buchstabe, # oder <)	To – let go there (letter, # or <)
+Unsichtbarer Knopf	Invisible button
+unsichtbar	invisible
+Unsichtbarer Baustein	Invisible block
+Liegt auf dem Startbildschirm – Platz und Größe im Baukasten (lange drücken)	On the home screen – position and size in the builder (long-press)
+Liegt jetzt auf dem Startbildschirm – im Baukasten verschieben	Now on the home screen – move it in the builder
+Auf dem Startbildschirm unsichtbar. Gehört zum Code (Einstellungen → Alphabet → Code).	Invisible on the home screen. Belongs to the code (Settings → Alphabet → Code).
+Code	Code
+Von:  {0}	From:  {0}
+Bis:  {0}	To:  {0}
+Auf einem Buchstaben von … bis … anfangen, hoch bis # ziehen und dort loslassen.	Start on a letter from … to …, drag up to # and let go there.
+„Von“ wählen	Choose “From”
+„Bis“ wählen	Choose “To”
+„Von“ muss im Alphabet vor „Bis“ kommen	“From” must come before “To” in the alphabet
+Zwischen „Von“ und „Bis“ steht kein Buchstabe im Alphabet	No letter between “From” and “To” is in the alphabet
+Erst den jetzigen Code	First the current code
+Code stimmt nicht	Code is wrong
+Code gespeichert	Code saved
+Privater Bereich	Private area
+Versteckte Apps hinter dem Code	Hidden apps behind the code
+Erst unten einen Code festlegen	Set a code below first
+Unsichtbarer Knopf vor dem Code	Invisible button before the code
+Neben der Uhr	Next to the clock
+Selbst platzieren	Place it yourself
+Irgendwo auf der Startseite, Größe frei	Anywhere on the home screen, any size
+Kein Knopf	No button
+Nur der Code reicht	The code alone is enough
+Neuer Code	New code
+Code festlegen	Set code
+Code speichern	Save code
+Anderer Ton bei	Different sound at
+Noch bei keinem – Buchstaben antippen (mehrere gehen)	None yet – tap letters (several work)
+Welcher Ton	Which sound
+Antippen spielt ihn einmal vor – läuft über die Medien-Lautstärke	Tapping plays it once – uses the media volume
+Bei keinem mehr	At none
+Hoch	High
+Tief	Low
+Glöckchen	Little bell
+Doppel-Klick	Double click
+Von … bis … ändern	Change from … to …
+Gefühl	Feel
+Vibration beim Antippen	Vibrate on tap
+Kurzes Klicken bei Bausteinen, deutlicher beim langen Drücken	Short click on blocks, stronger on long-press
+Bausteine federn	Bouncy blocks
+Beim Drücken minimal kleiner, dann federn sie zurück	Shrink slightly when pressed, then spring back
+Weiche Übergänge	Smooth transitions
+Bausteine gleiten im Baukasten an ihren Platz, Favoriten / Buchstabe / Seite bei # blenden über	Blocks glide into place in the builder, favorites / letter / page at # fade over
+Suche startet sofort	Search starts instantly
+Passt nur noch eine App, startet sie ohne Antippen	When only one app matches, it starts without tapping
+Noch kein Code festgelegt – unten Von und Bis wählen und speichern.	No code set yet – choose From and To below and save.
+Der private Bereich ist aus – der Code öffnet nichts. Unten einschalten.	The private area is off – the code opens nothing. Turn it on below.
+Sichern & Wiederherstellen	Back up & restore
+Startbildschirm, Seite bei #, Design, Themes, eigene Bausteine, Favoriten und Schriften als eine Datei – z. B. fürs neue Handy. Code, privater Bereich und versteckte Apps kommen nicht mit.	Home screen, page at #, design, themes, own blocks, favorites and fonts as one file – e.g. for a new phone. Code, private area and hidden apps are not included.
+Sichern	Back up
+Als Datei speichern (z. B. in Downloads oder Drive)	Save as a file (e.g. in Downloads or Drive)
+Gesichert	Backed up
+Sichern hat nicht geklappt	Backup failed
+Wiederherstellen	Restore
+Sicherungs-Datei wählen – ersetzt das jetzige Aussehen	Choose a backup file – replaces the current look
+Das ist keine Sicherung	That is not a backup
+Wiederherstellen?	Restore?
+Sicherung vom 	Backup from 
+Startbildschirm, Design und Einstellungen werden ersetzt. Danach startet der Launcher kurz neu.	Home screen, design and settings will be replaced. The launcher then restarts briefly.
+Einstellung suchen	Search settings
+AUSSEHEN	APPEARANCE
+Design ändern	Change design
+Bausteine, Favoriten, Knöpfe	Blocks, favorites, buttons
+Aussehen, Wischen, Klack, Code	Look, swiping, click, code
+In der App-Liste nach links	Swipe left in the app list
+Vibration, Federn, Übergänge	Vibration, bounce, transitions
+Rechte, Statusleiste, Sprache, Sichern	Permissions, status bar, language, backup
+Version, Datenschutz, Schriften	Version, privacy, fonts
+Antippen	Tapping
+Suche	Search
+Themes	Themes
+Weitere Designs laden	Load more designs
+Eigene Schrift laden	Load own font
+Design → Themes	Design → Themes
+Design → Schrift	Design → Font
+Design → Icons	Design → Icons
+Bild	Picture
+Bild wählen …	Choose picture …
+Aus der Galerie oder den Dateien	From the gallery or your files
+Aus der Galerie oder den Dateien – läuft stumm in Schleife	From the gallery or your files – plays muted in a loop
+Sperrbildschirm zeigt	Lock screen shows
+Eigenes Bild	Own picture
+Eigenes Video	Own video
+Ein Bild aus der Galerie oder den Dateien – nur auf dem Sperrbildschirm	A picture from the gallery or your files – only on the lock screen
+Ein Video, stumm in Schleife – läuft über den Live-Hintergrund von {0}	A video, muted in a loop – runs via the {0} live wallpaper
+Anderes Bild wählen …	Choose another picture …
+Anderes Video wählen …	Choose another video …
+Galerie oder Dateien	Gallery or files
+Live-Hintergrund einschalten	Turn on live wallpaper
+Einmal nötig – dort „Start- und Sperrbildschirm“ wählen	Needed once – choose “Home and lock screen” there
+Noch kein Bild gewählt – Einstellungen → Design → Hintergrund → Bild	No picture chosen yet – Settings → Design → Background → Picture
+Hinter dem Alphabet	Behind the alphabet
+Am Rand hinter den Buchstaben eine Welle – sie kommt dem Daumen beim Wischen entgegen	A wave at the edge behind the letters – it reaches toward your thumb as you swipe
+Felder im Raster ploppen auf Höhe des Daumens auf	Grid cells pop up at thumb height
+Nur die Buchstaben	Just the letters
+Schrift der Uhr	Clock font
+Wie Design	As design
+Neon	Neon
+Schatten	Shadow
+Haarlinie	Hairline
+Doppellinie	Double line
+3D-Block	3D block
+Sterne	Stars
+Geometrie	Geometric
+Raumschiff	Spaceship
+Glitch	Glitch
+Pixel	Pixel
+Terminal	Terminal
+Streifen	Stripes
+Schablone	Stencil
+Plakat	Poster
+Schmal	Narrow
+Mode	Fashion
+Kino	Cinema
+Varieté	Vaudeville
+Retro	Retro
+Schwung	Swing
+Western	Western
+Holzschnitt	Woodcut
+Tropfen	Drip
+Kreide	Chalk
+Skizze	Sketch
+Marker	Marker
+Material der Uhr	Clock material
+Liquid Glass	Liquid Glass
+Klares Glas – am Rand verbiegt es den Hintergrund wie eine Linse	Clear glass – at the edge it bends the background like a lens
+Braucht Android 13 oder neuer – hier bleibt die Uhr normal	Needs Android 13 or newer – the clock stays normal here
+Weichzeichnen	Blur
+Brechung	Refraction
+aus	off
+Swiss-Linie	Swiss line
+Kreise	Circles
+Feine Haarlinie, ein roter Block rastet beim Daumen ein	A fine hairline, a red block snaps to your thumb
+Kreise breiten sich aus, wo der Daumen das Alphabet berührt	Circles spread where your thumb touches the alphabet
+Banknoten-Rosette folgt dem Daumen	A banknote rosette follows your thumb
+Dicke	Thickness
+keine Linie	no line
+Gefüllt	Filled
+Füllung – Deckkraft	Fill – opacity
+WLAN-Anzeige	Wi-Fi indicator
+Mobile Daten	Mobile data
+WLAN + mobile Daten	Wi-Fi + mobile data
+Akku (Samsung)	Battery (Samsung)
+Netztyp anzeigen (LTE / 5G)	Show network type (LTE / 5G)
+Dafür braucht die App die Berechtigung „Telefon“ – ohne siehst du nur die Balken und Pfeile	The app needs the “Phone” permission for this – without it you only see the bars and arrows
+Netztyp (LTE / 5G) wird angezeigt	Network type (LTE / 5G) is shown
+lädt	charging
+aus	off
+Akku mit Zahl	Battery with number
+Runterwischen öffnet Benachrichtigungen	Swipe down opens notifications
+Aus: auf dem Startbildschirm nach unten wischen klappt Samsungs Benachrichtigungen nicht mehr auf	Off: swiping down on the home screen no longer opens the notification panel
+Mitteltaste (Play/Pause)	Middle button (play/pause)
+Pause-Striche – Höhe	Pause bars – height
+Play-Dreieck – Größe	Play triangle – size
+Breite der Tasten-Reihe	Width of the button row
+Mitteltaste mit Hintergrund	Middle button with background
+Ring um die Mitte	Ring around the middle
+Kein	None
+Beat-Ring	Beat ring
+Song-Ring	Song ring
+Spielt: Kreis zittert, Striche springen im Takt. Pause: dünner grauer Ring	Playing: the circle trembles, lines jump to the beat. Paused: thin grey ring
+Füllt sich mit dem Song – bei Pause blinkt er	Fills up with the song – blinks when paused
+Ring – Abstand	Ring – distance
+Striche – Länge	Lines – length
+Echten Takt hören	Listen to the real beat
+Braucht die Erlaubnis „Mikrofon“ – Android hört dann nur, wie laut welche Töne gerade sind. Ohne: erfundener Takt	Needs the “Microphone” permission – Android then only measures how loud each pitch is. Without it: a made-up beat
+Echter Takt an	Real beat on
+Mitte	Middle
+Taste	Button
+Ring – Größe	Ring – size
+Play / Pause in der Mitte	Play / pause in the middle
+Aus, wenn dort z. B. die Kamera sitzt	Off if e.g. the camera sits there
+Striche links / rechts – Länge	Lines left / right – length
+Echter Takt läuft ✓	Real beat running ✓
+Hört zu …	Listening …
+Echter Takt an – startet, sobald Musik läuft	Real beat on – starts as soon as music plays
+Android liefert nur Stille – das Handy lässt das Mithören nicht zu (oder die Lautstärke ist auf 0). Es läuft der erfundene Takt	Android only delivers silence – the phone does not allow listening (or the volume is 0). The made-up beat is running
+Farbe beim Laden	Colour while charging
+Grün	Green
+Wie das Design	Like the design
+Schwarz & Weiß: wie das Design, sonst grün	Black & White: like the design, otherwise green
+Rot unter 15 %	Red below 15 %
+Stärke (echter Takt)	Strength (real beat)
+Bewegt sich mit der Musik	Moves with the music
+Was hinter dem Alphabet ist (Welle, Swiss-Kante, Swiss-Linie, Kreise) zuckt im Takt und mit dem Bass	Whatever is behind the alphabet (wave, Swiss edge, Swiss line, circles) twitches to the beat and the bass
+Stärke (Musik)	Strength (music)
+Braucht die Erlaubnis „Mikrofon“ – ohne bewegt sich nichts mit der Musik	Needs the “Microphone” permission – without it nothing moves with the music
+Automatisch (erkennt die Musik)	Automatic (recognises the music)
+Schätzt ein, was läuft (ruhig, chill, Pop, Rock, Elektro, Klassik, Sprache), und reagiert jeweils anders – auch auf Aufbau und Drop. Deine Stärke ist die Obergrenze	Judges what is playing (calm, chill, pop, rock, electronic, classical, speech) and reacts differently to each – including build-ups and drops. Your strength is the upper limit
+Erkennt die Musik, sobald etwas läuft	Recognises the music as soon as something plays
+Erkannt	Detected
+Ruhig	Calm
+Chill	Chill
+Pop	Pop
+Rock	Rock
+Elektro / Bass	Electronic / bass
+Klassik	Classical
+Sprache	Speech
+viel Bass	lots of bass
+wenig Bass	little bass
+ausgewogen	balanced
+Drop!	Drop!
+baut sich auf	building up
+Milchglas	Frosted glass
+Was hinter dem Rahmen ist, wird weichgezeichnet und eingefärbt – die Bausteine darauf bleiben scharf	Whatever is behind the frame gets blurred and tinted – the blocks on it stay sharp
+Farbe – Deckkraft	Colour – opacity
+Unschärfe	Blur
+Text (leer = Standard)	Text (empty = default)
+Hintergrund unscharf	Blurred background
+Was hinter der Leiste liegt, wird weichgezeichnet – der Balken bleibt fest	Whatever is behind the bar gets blurred – the bar itself stays solid
+Braucht Android 12 oder neuer	Needs Android 12 or newer
+Geht bei diesem Aussehen nicht (keine einfache Kapsel) – z. B. Schwarz & Weiß, Pille oder Glas wählen	Not possible with this look (no simple capsule) – e.g. choose Black & White, Pill or Glass
+Das Handy erlaubt gerade keine Unschärfe (z. B. Energiesparmodus)	The phone does not allow blur right now (e.g. power saving mode)
+Welle aus Milchglas	Frosted-glass wave
+Im Wasser der Welle ist der Startbildschirm darunter unscharf – die Kante bleibt	Inside the wave the home screen underneath is blurred – the edge stays sharp
+Das Handy erlaubt gerade keine Unschärfe über anderen Apps. Prüfen: Energiesparmodus aus · Einstellungen → Bedienungshilfen → Sichtbarkeitsverbesserungen → „Transparenz und Unschärfe verringern“ aus · Entwickleroptionen → „Unschärfe auf Fensterebene zulassen“ an	The phone does not allow blur over other apps right now. Check: power saving off · Settings → Accessibility → Visibility enhancements → “Reduce transparency and blur” off · Developer options → “Allow window-level blurs” on
+Unschärfe ist auf diesem Handy erlaubt ✓	Blur is allowed on this phone ✓
+Play = letzte Musik · ↓ = Heruntergeladen	Play = last music · ↓ = Downloaded
+Bei Benachrichtigungen	On notifications
+Kommt eine Nachricht (WhatsApp, Signal, Mail …), läuft oben kurz eine kleine Welle herein – in der Farbe der App, Form wie hier gewählt	When a message arrives (WhatsApp, Signal, mail …), a small wave runs in at the top – in the app colour, shaped like the choice here
+In der Farbe der App	In the app colour
+Aus: in der Farbe der Welle	Off: in the wave colour
+Wie weit runter	How far down
+Dauer	Duration
+Braucht den Benachrichtigungs-Zugriff (System → Berechtigungen)	Needs notification access (System → Permissions)
+Cover der Musik	Music cover
+Liegt ein Musik-Baustein im Rahmen, leuchtet dahinter das Cover des Songs – nach außen durchsichtiger	If a music block sits in the frame, the song cover glows behind it – fading outwards
+Cover – Deutlichkeit	Cover – intensity
+Cover – Reichweite	Cover – reach
+Cover – Unschärfe	Cover – blur
+Meine Designs	My designs
+Noch keins gespeichert	None saved yet
+Jetziges Design speichern	Save current design
+Startbildschirm, Bausteine, Design und Einstellungen – als Ganzes	Home screen, blocks, design and settings – all together
+Design speichern	Save design
+Gespeichert	Saved
+Speichern hat nicht geklappt	Saving failed
+Laden	Load
+Löschen	Delete
+Kann nicht geladen werden	Cannot be loaded
+Laden ersetzt Startbildschirm, Design und Einstellungen durch diesen Stand. Danach startet der Launcher kurz neu. Code und privater Bereich bleiben, wie sie sind.	Loading replaces home screen, design and settings with this state. The launcher then restarts briefly. Code and private area stay as they are.
+Große Uhr, Hintergrund, Abdunkeln, Übergang	Big clock, background, dimming, transition
+Atelier – Nicht stören	Atelier – Do not disturb
+Adresse fehlt	Address missing
+Lange drücken → Bausteine → Adresse eintragen	Long-press → Blocks → enter address
+Ab Werk ist nur „{0}“ dabei. Jedes Design lädst du einmal – es bringt seine Themes mit, dazu passende Icons, Schrift, Hintergrund und mehr. Nichts wird aus dem Internet geladen.	Out of the box only “{0}” is included. Load each design once – it brings its themes plus matching icons, font, background and more. Nothing is downloaded from the internet.
+Wird gerade benutzt – erst ein anderes Theme wählen (z. B. „{0}“)	In use right now – pick another theme first (e.g. “{0}”)
+Benachrichtigungszugriff	Notification access
+Noch kein Video gewählt – Einstellungen → Design → Video	No video chosen yet – Settings → Design → Video
+Noch keine Lottie-Datei gewählt – Einstellungen → Design → Lottie	No Lottie file chosen yet – Settings → Design → Lottie
+Fehler im Hintergrund-Code – {0}	Error in background code – {0}
+Eigener Regler statt Samsung	Own slider instead of Samsung's
+Aus = Lautstärketasten wie gewohnt	Off = volume keys as usual
+Aussehen	Look
+Lautstärketasten zeigen rechts einen schmalen Regler. Das untere Drittel (unter dem Strich) ist der Feinbereich: leiser als Android normalerweise kann, in kleinen Schritten. Darüber die normalen Stufen. Die Leiser-Taste geht unten in 3-dB-Schritten weiter.\n\nBei Anrufen und Klingeln bleibt alles wie bei Samsung. Der Dienst liest nur die Lautstärketasten und – für die Randgesten – welche App gerade vorne ist.	The volume keys show a slim slider on the right. The bottom third (below the line) is the fine range: quieter than Android normally allows, in small steps. Above it the normal steps. The volume-down key keeps going in 3 dB steps at the bottom.\n\nDuring calls and ringing everything stays as with Samsung. The service only reads the volume keys and – for the edge gestures – which app is in front.
+Dein Handy erlaubt die Feinregelung gerade nicht – der Regler hat dann nur die normalen Stufen.	Your phone does not allow fine control right now – the slider then only has the normal steps.
+Falls sich der Schalter nicht einschalten lässt: App-Info des Launchers → ⋮ oben rechts → „Eingeschränkte Einstellungen zulassen“, dann nochmal.	If the switch won't turn on: the launcher's App info → ⋮ top right → “Allow restricted settings”, then try again.
+Testen	Test
+Nur im Launcher gespeichert – Datei im Ordner ließ sich nicht schreiben	Saved in the launcher only – the file in the folder could not be written
+Beispiel	Example
+\nDort findest du menue.js, hintergrund.js, alphabet.js, LIESMICH.txt und beispiele/. Bearbeiten mit jeder App oder am PC per USB – der Launcher liest die Dateien beim nächsten Anzeigen neu.	\nThere you'll find menue.js, hintergrund.js, alphabet.js, LIESMICH.txt and beispiele/. Edit them with any app or on a PC via USB – the launcher re-reads the files the next time they are shown.
+Wähle einen Ordner (z. B. Dokumente → neuer Ordner „Launcher“). Dann liegt dein ganzer Code dort als normale Dateien, sichtbar in „Eigene Dateien“, und du kannst ihn bauen, wie du willst.	Choose a folder (e.g. Documents → new folder “Launcher”). Then all your code lives there as normal files, visible in “My Files”, and you can build it however you like.
+Anderen Ordner wählen	Choose another folder
+Ordner wählen	Choose folder
+Deine eigenen Dateien bleiben unverändert	Your own files stay unchanged
+Liegt im Ordner	Stored in folder
+Ordner nicht mehr benutzen	Stop using folder
+Code bleibt dann nur im Launcher	The code then stays in the launcher only
+hintergrund.js – Design „Eigener Code“	hintergrund.js – design “Own code”
+Konsole	Console
+Leeren	Clear
+Alles neu laden	Reload everything
+Code neu lesen und starten (Menü, Hintergrund, Alphabet)	Re-read and start the code (menu, background, alphabet)
+Wird neu geladen	Reloading
+Platzieren, weglassen, Code ändern	Place, remove, change code
+Community-Themes laufen ohne Server und ohne Konto: Ein Theme ist ein kurzer Code. Wer ihn einfügt, bekommt genau dein Aussehen (Farben, Hintergrund, Schrift, Icons, Uhr).	Community themes work without a server or account: a theme is a short code. Whoever pastes it gets exactly your look (colours, background, font, icons, clock).
+Keine Icon-Pakete installiert. Kostenlos: „Arcticons“ (Linien-Icons, ähnlich Anycons), „Lawnicons“ oder „Delta“ aus dem Play Store bzw. F-Droid. Danach erscheinen sie hier.	No icon packs installed. Free ones: “Arcticons” (line icons, similar to Anycons), “Lawnicons” or “Delta” from the Play Store or F-Droid. They will then appear here.
+Einzelnes Icon ändern: App nach rechts wischen → „Icon ändern“. Dort kannst du aus jedem Icon-Paket ein beliebiges Bild wählen oder zum Original zurück.	Change a single icon: swipe the app to the right → “Change icon”. There you can pick any image from any icon pack or go back to the original.
+Über	About
+Vom Griff aus ins Bild wischen: gerade, schräg nach oben oder schräg nach unten (untere Ecken: gerade hoch, schräg zur Mitte oder flach zur Mitte – links und rechts gleich). Mit „+ Neue Randgeste“ legst du beliebig viele an – jede mit eigenem Rand, eigener Größe und eigenen Aktionen. Sobald du ein Fünftel der Breite drin bist, passiert die Aktion – ohne Loslassen. Vorher loslassen = abbrechen.\n\nSolange diese Seite offen ist, siehst du die Berührfläche blau markiert – auch wenn der Griff 100 % durchsichtig ist. Alle Regler lassen sich um 10 % übersteuern.\n\nWenn Samsungs Wischgesten „Von der Seite und unten wischen“ an sind, kann sich das mit dem Zurück-Wisch beißen. Dann den Griff nur auf einen Teil der Höhe legen oder bei Samsung „Von unten wischen“ nehmen.	Swipe from the handle into the screen: straight, diagonally up or diagonally down (bottom corners: straight up, diagonally to the middle or flat to the middle – left and right the same). With “+ New edge gesture” you can add as many as you like – each with its own edge, size and actions. As soon as you are a fifth of the width in, the action happens – without letting go. Letting go earlier = cancel.\n\nWhile this page is open, the touch area is marked blue – even if the handle is 100 % transparent. All sliders can be overdriven by 10 %.\n\nIf Samsung's gestures “Swipe from sides and bottom” are on, they may clash with the back swipe. Then put the handle on part of the height only, or choose “Swipe from bottom” in Samsung's settings.
+Mein Menü	My menu
+Bastler	Tinkerer
+function wisch(w) wird nach jedem Wisch übers Alphabet aufgerufen.	function wisch(w) is called after every swipe over the alphabet.
+function male(g) wird ca. 30-mal pro Sekunde aufgerufen.	function male(g) is called about 30 times per second.
+Unsichtbar	Invisible
+Vom Bildschirmrand reinwischen für Zurück, Home, Apps und mehr – mit Animationen passend zum Theme. Dazu ein eigener Lautstärke-Regler im gleichen Stil.	Swipe in from the screen edge for Back, Home, Apps and more – with animations matching the theme. Plus its own volume slider in the same style.
+Licht	Light
+Neue Nachricht	New message
+Ordner gewählt – Beispiele werden hineingelegt	Folder chosen – examples are being added
+Bitte eine .ttf- oder .otf-Datei wählen	Please choose a .ttf or .otf file
+Schrift „{0}“ übernommen	Font “{0}” applied
+Die Datei ist keine gültige Schrift	The file is not a valid font
+Guten Morgen	Good morning
+Hallo	Hello
+Guten Abend	Good evening
+Gedrückt: 	Pressed: 
+Nachrichten	Messages
+Keine neuen WhatsApp-Nachrichten	No new WhatsApp messages
+App nicht gefunden: {0}	App not found: {0}
+netz.holen: höchstens 30 Abrufe pro Minute	netz.holen: at most 30 requests per minute
+Leer – das Menü baust du selbst: Einstellungen → Mein Menü	Empty – you build the menu yourself: Settings → My menu
+Fehler im Code – 	Error in code – 
+Leer – beim Wischen passiert nichts Eigenes	Empty – nothing custom happens when swiping
+Mein Design ({0})	My design ({0})
+Mein Design	My design
+Takt geht nicht ({0}) – es läuft der erfundene Takt	Beat not available ({0}) – the made-up beat is running
+Alphabet bewegt sich mit der Musik	Alphabet moves with the music
+Aus Privat entfernen	Remove from private
+Privat machen	Make private
+Kein Icon-Paket installiert.\n\nIcon-Pakete sind normale Apps. Kostenlos und schön sind z. B. „Arcticons“ (feine Linien, ähnlich Anycons), „Lawnicons“ oder „Delta“ – im Play Store oder bei F-Droid. Danach hier wieder öffnen.	No icon pack installed.\n\nIcon packs are normal apps. Free and nice ones are e.g. “Arcticons” (fine lines, similar to Anycons), “Lawnicons” or “Delta” – in the Play Store or on F-Droid. Then open this again.
+Diese Apps erscheinen im Pop-up von „{0}“	These apps appear in the pop-up of “{0}”
+Privat	Private
+Private Apps	Private apps
+Ausgewählte Apps sind nur noch im privaten Bereich zu sehen.	Selected apps are only visible in the private area.
+rastet ein	snaps in
+Wellen-Animation aus	Wave animation off
+Einmal „Systemeinstellungen ändern“ erlauben	Allow “Modify system settings” once
+Einmal „Zugriff auf Nicht stören“ für den Launcher erlauben	Allow “Do not disturb access” for the launcher once
+Android lässt „Nicht stören“ gerade nicht zu	Android does not allow “Do not disturb” right now
+Heute aus	Off today
+Aktiv	Active
+Bereit	Ready
+Flugmodus	Airplane mode
+Klingeln	Ring
+Lautstärke	Volume
+Regler	Slider
+Standort	Location
+Energiesparen	Power saving
+Stellen	Set
+Stunde	Lesson
+Leer – lange drücken, entsperren, Bausteine hinzufügen	Empty – long-press, unlock, add blocks
+Keine E-Mails	No emails
+Striche drumherum	Lines around it
+Zeitlimit: Skript läuft zu lange (Endlosschleife?)	Time limit: script runs too long (endless loop?)
+Zu viel Speicher verbraucht	Too much memory used
+Skript hing 3× fest und ist gesperrt – Code ändern und speichern	Script got stuck 3× and is blocked – change the code and save
+Skript hängt fest und wurde abgebrochen (z. B. sehr aufwendige Regex)	Script got stuck and was stopped (e.g. a very complex regex)
+Zeitlimit: Skript läuft zu lange	Time limit: script runs too long
+Skript hängt fest	Script is stuck
+Zu tiefe Rekursion	Recursion too deep
+Fokus	Focus
+Sperrseite	Lock page
+Karte	Card
+Schieben	Slide
+Glasscheibe	Glass pane
+Tür	Door
+Jalousie	Blinds
+Kreis	Circle
+Keine Navigation	No navigation
+Noch keine Apps	No apps yet
+Über die Buchstaben wischen.\nApp nach rechts wischen oder lange drücken → Pop-up.\nAuf # nach links = Seite bei #. Lange auf den Startbildschirm drücken = Bausteine.	Swipe over the letters.\nSwipe an app to the right or long-press → pop-up.\nOn # swipe left = page at #. Long-press the home screen = blocks.
+Randkante	Edge line
+Abstand vom Rand	Distance from edge
+Alter Code stimmt nicht	Old code is wrong
+Mindestens ein Startbuchstabe	At least one start letter
+Genau ein Ziel (z. B. #)	Exactly one target (e.g. #)
+Ziel darf kein Startbuchstabe sein	Target must not be a start letter
+Keiner der Startbuchstaben steht im Alphabet	None of the start letters is in the alphabet
+Das Ziel steht nicht im Alphabet	The target is not in the alphabet
+Wie das Handy / Like phone	Like phone / Wie das Handy
+Sperr-Seite	Lock page
+Sperr-Seite gestalten	Design lock page
+Wachsen	Grow
+Ohne	None
+Am schnellsten: die App wächst sofort aus der angetippten Stelle, während sie im Hintergrund fertig startet.	Fastest: the app grows instantly out of where you tapped while it finishes starting in the background.
+Keine Animation – der Launcher bleibt stehen, bis die App ihr erstes Bild hat (wirkt bei großen Apps langsamer).	No animation – the launcher stays until the app has its first frame (feels slower with big apps).
+Uhrzeit (klein)	Time (small)
+Uhrzeit	Time
+Datum darunter	Date below
+Nur wenn der Baustein hoch genug ist	Only if the block is tall enough
+Nach Namenslänge ordnen	Sort by name length
+Der kürzeste App-Name steht auf Höhe des Daumens, nach oben und unten werden die Namen immer länger. Aus = nach dem Alphabet	The shortest app name sits at the height of your thumb, names get longer above and below. Off = alphabetical
+Dein Handy-Hintergrund ist ein Live-Hintergrund (bewegt) – den kann Android nicht als Bild herausgeben, er bleibt hinter dem Rahmen scharf. Mit einem normalen Bild als Hintergrund geht es.	Your phone wallpaper is a live wallpaper (animated) – Android can't hand it out as an image, so it stays sharp behind the frame. It works with a normal image as wallpaper.
+Grusel	Horror
+Schrift, Hintergrund …	Font, background …
+Größe: {0} × {1} Linien	Size: {0} × {1} lines
+Nach Updates suchen	Check for updates
+Fragt nur beim Antippen bei GitHub nach	Only asks GitHub when you tap
+Suche …	Searching …
+Keine Verbindung – nochmal antippen	No connection – tap again
+Noch keine Version auf GitHub	No version on GitHub yet
+Update laden	Download update
+Neue Version {0} – antippen, dann die APK öffnen	New version {0} – tap, then open the APK
+Du hast die neueste Version	You have the latest version
+Wetter & Termine	Weather & dates

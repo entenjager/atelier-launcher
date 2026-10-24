@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Atelier-Logo fuer Themen-Icons (Android faerbt es selbst ein) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M29,85 C32,61 40,41 55,24 C52,44 50,63 49.5,77 C44,82 37,84.5 29,85 Z M58.5,30 C71,44 78.5,62 80,85 C72.5,84.5 67,82 63.5,77.5 C63,62 61,46 58.5,30 Z M50,64.5 C54,62.5 58.5,62 62.8,62.6 L63.1,67.2 C58.8,66.8 54.3,67.6 49.8,69.6 Z" />
+</vector>
