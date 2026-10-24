@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fenster-Animationen des Launchers: alle aus. Sonst schiebt Android den Startbildschirm beim
+         Hochwischen / Home wie eine normale App herein. -->
+    <style name="OhneAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/keine</item>
+        <item name="android:activityOpenExitAnimation">@anim/keine</item>
+        <item name="android:activityCloseEnterAnimation">@anim/keine</item>
+        <item name="android:activityCloseExitAnimation">@anim/keine</item>
+        <item name="android:taskOpenEnterAnimation">@anim/keine</item>
+        <item name="android:taskOpenExitAnimation">@anim/keine</item>
+        <item name="android:taskCloseEnterAnimation">@anim/keine</item>
+        <item name="android:taskCloseExitAnimation">@anim/keine</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/keine</item>
+        <item name="android:taskToFrontExitAnimation">@anim/keine</item>
+        <item name="android:taskToBackEnterAnimation">@anim/keine</item>
+        <item name="android:taskToBackExitAnimation">@anim/keine</item>
+        <item name="android:wallpaperOpenEnterAnimation">@anim/keine</item>
+        <item name="android:wallpaperOpenExitAnimation">@anim/keine</item>
+        <item name="android:wallpaperCloseEnterAnimation">@anim/keine</item>
+        <item name="android:wallpaperCloseExitAnimation">@anim/keine</item>
+        <item name="android:wallpaperIntraOpenEnterAnimation">@anim/keine</item>
+        <item name="android:wallpaperIntraOpenExitAnimation">@anim/keine</item>
+        <item name="android:wallpaperIntraCloseEnterAnimation">@anim/keine</item>
+        <item name="android:wallpaperIntraCloseExitAnimation">@anim/keine</item>
+    </style>
+</resources>
