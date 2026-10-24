@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nur fuer die oeffentliche Version (Atelier). Wird mit app/src/main/AndroidManifest.xml zusammengefuehrt. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Atelier braucht diese nicht (nur fuer die private Version) - raus, damit nichts Unnoetiges angefragt wird -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:node="remove" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" tools:node="remove" />
+    <uses-permission android:name="android.permission.BLUETOOTH" tools:node="remove" />
+
+    <!-- Feine Lautstaerke unter Stufe 1 (Erweiterung "Randgesten & Lautstaerke") -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- "Nach Updates suchen": neue Version direkt aus der App installieren -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.UPDATE_PACKAGES_WITHOUT_USER_ACTION" />
+
+    <application>
+        <!-- Erweiterung "Randgesten & Lautstaerke": beim Installieren AUS (taucht dann auch nicht in den
+             Bedienungshilfen auf) - erst in den Einstellungen unter "Erweiterungen" geladen -->
+        <service
+            android:name="de.atelierlauncher.app.LautDienst"
+            android:enabled="false"
+            android:exported="false"
+            android:label="Atelier – Randgesten &amp; Lautstärke"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/laut_dienst" />
+        </service>
+    </application>
+</manifest>

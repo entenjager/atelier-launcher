@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="laut_beschreibung">Erweiterung des Launchers: Randgesten (vom Bildschirmrand reinwischen) und ein eigener Lautstärke-Regler. Liest nur die Lautstärketasten, welche App gerade vorne ist und wo die Tastatur ist (damit die Randgesten sie nicht verdecken). Für manche Animationen wird kurz ein Bildschirmfoto im Speicher gemacht – nie gespeichert oder verschickt.</string>
+</resources>
