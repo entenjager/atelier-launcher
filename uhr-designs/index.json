@@ -1,0 +1,104 @@
+{
+ "designs": [
+  {
+   "id": "monoton",
+   "name": "Neon",
+   "datei": "monoton.ttf"
+  },
+  {
+   "id": "bungeeoutline",
+   "name": "Umriss",
+   "datei": "bungeeoutline.ttf"
+  },
+  {
+   "id": "bungeehairline",
+   "name": "Haarlinie",
+   "datei": "bungeehairline.ttf"
+  },
+  {
+   "id": "rampartone",
+   "name": "3D-Block",
+   "datei": "rampartone.ttf"
+  },
+  {
+   "id": "majormonodisplay",
+   "name": "Mono Display",
+   "datei": "majormonodisplay.ttf"
+  },
+  {
+   "id": "megrim",
+   "name": "Geometrie",
+   "datei": "megrim.ttf"
+  },
+  {
+   "id": "orbitron",
+   "name": "Raumschiff",
+   "datei": "orbitron.ttf"
+  },
+  {
+   "id": "wallpoet",
+   "name": "Graffiti",
+   "datei": "wallpoet.ttf"
+  },
+  {
+   "id": "vt323",
+   "name": "Terminal",
+   "datei": "vt323.ttf"
+  },
+  {
+   "id": "plaster",
+   "name": "Schablone",
+   "datei": "plaster.ttf"
+  },
+  {
+   "id": "sixcaps",
+   "name": "Schmal",
+   "datei": "sixcaps.ttf"
+  },
+  {
+   "id": "abrilfatface",
+   "name": "Mode",
+   "datei": "abrilfatface.ttf"
+  },
+  {
+   "id": "fascinate",
+   "name": "Varieté",
+   "datei": "fascinate.ttf"
+  },
+  {
+   "id": "shrikhand",
+   "name": "Retro",
+   "datei": "shrikhand.ttf"
+  },
+  {
+   "id": "pacifico",
+   "name": "Schwung",
+   "datei": "pacifico.ttf"
+  },
+  {
+   "id": "sancreek",
+   "name": "Western",
+   "datei": "sancreek.ttf"
+  },
+  {
+   "id": "ewert",
+   "name": "Holzschnitt",
+   "datei": "ewert.ttf"
+  },
+  {
+   "id": "nosifer",
+   "name": "Grusel",
+   "datei": "nosifer.ttf"
+  },
+  {
+   "id": "frederickathegreat",
+   "name": "Kreide",
+   "datei": "frederickathegreat.ttf"
+  },
+  {
+   "id": "londrinaoutline",
+   "name": "Skizze",
+   "datei": "londrinaoutline.ttf"
+  }
+ ]
+}
