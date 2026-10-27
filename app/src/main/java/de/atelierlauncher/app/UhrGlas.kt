@@ -49,6 +49,30 @@ import de.atelierlauncher.app.TextUe as Text
 //  einen eigenen Shader (AGSL, ab Android 13) geschickt. Video / Handy-Hintergrund: dort nur das Glas selbst.
 // ============================================================================
 
+/** Animation beim Wechsel der Uhrzeit: eingestellt oder passend zur Schrift (Kino/Plakat schreiben, Sterne fliegen) */
+internal fun uhrWechsel(u: UhrStil): String = when (u.wechsel) {
+    "" -> when (u.schrift) { in SCHREIB_SCHRIFTEN -> "schreiben"; STERNE_SCHRIFT -> "fliegen"; else -> "keine" }
+    else -> u.wechsel
+}
+
+/** Einstellung: Animation beim Wechsel der Uhrzeit (bei jeder Uhr-Schrift) */
+@Composable
+internal fun UhrWechselWahl(u: UhrStil, setze: (UhrStil) -> Unit) {
+    val passend = when (u.schrift) { in SCHREIB_SCHRIFTEN -> "Schreiben"; STERNE_SCHRIFT -> "Fliegen"; else -> "keine" }
+    Wahl("Animation beim Wechsel",
+         listOf("" to "Passend zur Schrift ($passend)", "keine" to "Keine", "schreiben" to "Schreiben", "fliegen" to "Fliegen"), u.wechsel,
+         "Schreiben: ein Strich wie am PC löscht die alten Ziffern und tippt die neuen. Fliegen: die Teile der alten Ziffer fliegen weg, die neuen fliegen ein.") {
+        setze(u.copy(wechsel = it))
+    }
+    if (uhrWechsel(u) != "keine") {
+        // erst beim Loslassen speichern (nicht bei jeder Bewegung des Reglers)
+        var w by androidx.compose.runtime.remember(u.wechselDauer) { androidx.compose.runtime.mutableFloatStateOf(u.wechselDauer.toFloat()) }
+        RgRegler("Länge der Animation", w, 25f..300f, "${w.toInt()} %", { setze(u.copy(wechselDauer = w.toInt())) }) { v ->
+            w = ((v / 5f).toInt() * 5).toFloat()
+        }
+    }
+}
+
 /** die Ziffern der Uhr - normal oder aus Glas (Uhr anpassen → Material der Uhr) */
 @Composable
 internal fun UhrZiffern(text: String, farbe: Color, groesse: TextUnit, dicke: FontWeight, zeilenhoehe: TextUnit,
@@ -56,6 +80,12 @@ internal fun UhrZiffern(text: String, farbe: Color, groesse: TextUnit, dicke: Fo
     val u = LocalZustand.current.thema.uhr
     if (u.schrift == Schriften.TROPFEN)
         TropfZiffern(text, stil.merge(TextStyle(fontSize = groesse, fontWeight = dicke, lineHeight = zeilenhoehe, shadow = null)), farbe, modifier)
+    else if (u.schrift == Schriften.GLITCH && !(u.material == "glas" && Build.VERSION.SDK_INT >= 33))
+        GlitchZiffern(text, stil.merge(TextStyle(fontSize = groesse, fontWeight = dicke, lineHeight = zeilenhoehe, shadow = null)), farbe, modifier)
+    else if (uhrWechsel(u) == "fliegen" && !(u.material == "glas" && Build.VERSION.SDK_INT >= 33))
+        SternZiffern(text, stil.merge(TextStyle(fontSize = groesse, fontWeight = dicke, lineHeight = zeilenhoehe, shadow = null)), farbe, modifier)
+    else if (uhrWechsel(u) == "schreiben" && !(u.material == "glas" && Build.VERSION.SDK_INT >= 33))
+        SchreibZiffern(text, stil.merge(TextStyle(fontSize = groesse, fontWeight = dicke, lineHeight = zeilenhoehe)), farbe, modifier)
     else if (u.material == "glas" && Build.VERSION.SDK_INT >= 33)
         GlasZiffern(text, stil.merge(TextStyle(fontSize = groesse, fontWeight = dicke, lineHeight = zeilenhoehe, shadow = null)),
                     u.glasBlur.toFloat(), u.glasBrechung / 100f, modifier)

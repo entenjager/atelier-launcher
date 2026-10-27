@@ -16,6 +16,9 @@
     <uses-permission android:name="android.permission.UPDATE_PACKAGES_WITHOUT_USER_ACTION" />
 
     <application>
+        <!-- 27.10.: kein eigener (Live-)Hintergrund in Atelier - immer das Hintergrundbild des Handys -->
+        <service android:name="de.atelierlauncher.app.WellenTapete" tools:node="remove" />
+
         <!-- Erweiterung "Randgesten & Lautstaerke": beim Installieren AUS (taucht dann auch nicht in den
              Bedienungshilfen auf) - erst in den Einstellungen unter "Erweiterungen" geladen -->
         <service

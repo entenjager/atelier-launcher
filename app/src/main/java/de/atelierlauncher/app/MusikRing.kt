@@ -12,6 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
@@ -44,8 +45,8 @@ internal object Beat {
     val baender = FloatArray(BEAT_STRICHE)
     @Volatile var zuletzt = 0L
         private set
-    private var vis: Visualizer? = null
-    private var nutzer = 0
+    @Volatile private var vis: Visualizer? = null
+    @Volatile private var nutzer = 0
     /** fuer die Anzeige in den Einstellungen: "", "laeuft", "fehler: ..." */
     @Volatile var stand = ""
         private set
@@ -59,13 +60,32 @@ internal object Beat {
 
     fun erlaubt(ctx: Context) = ctx.checkSelfPermission(Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED
 
-    fun an(ctx: Context) { nutzer++; starten(ctx) }
+    // Alles mit dem Visualizer laeuft auf einem eigenen Faden: Anlegen, Daten, Abholen sind Anfragen an Androids
+    // Audio-Dienst und koennen dauern - auf dem Haupt-Faden hat das beim Musikstart alles ruckeln lassen
+    private val faden by lazy { android.os.HandlerThread("Takt").also { it.start() } }
+    private val h by lazy { android.os.Handler(faden.looper) }
+    @Volatile private var abholLaeuft = false
+
+    fun an(ctx: Context) {
+        nutzer++
+        val app = ctx.applicationContext
+        // erst kurz nach dem Start der Musik: dann ist die Musik-App selbst fertig mit Hochfahren
+        h.postDelayed({ startenJetzt(app) }, 1200)
+    }
 
     /** Launcher nicht mehr vorne (onPause): Mithoeren sofort beenden - Compose raeumt evtl. erst spaeter auf */
-    fun pause() { try { vis?.enabled = false; vis?.release() } catch (t: Throwable) { }; vis = null; if (stand == "laeuft") stand = "" }
+    fun pause() { h.post { freigeben() } }
+
+    private fun freigeben() { try { vis?.enabled = false; vis?.release() } catch (t: Throwable) { }; vis = null; if (stand == "laeuft") stand = "" }
 
     /** (nochmal) versuchen - z. B. nachdem die Erlaubnis gerade erteilt wurde */
     fun starten(ctx: Context) {
+        if (vis != null || nutzer == 0 || !(Sichtbar.an || SperrSeite.sichtbar.value)) return
+        val app = ctx.applicationContext
+        h.post { startenJetzt(app) }
+    }
+
+    private fun startenJetzt(ctx: Context) {
         if (vis != null || nutzer == 0 || !(Sichtbar.an || SperrSeite.sichtbar.value)) return
         if (!erlaubt(ctx)) { stand = ""; return }
         try {
@@ -87,21 +107,30 @@ internal object Beat {
         }
     }
 
-    /** falls der Rueckruf nicht kommt: selbst nachfragen (einmal pro Bild) */
+    /** falls der Rueckruf nicht kommt: selbst nachfragen - auf dem Takt-Faden, hoechstens alle 150 ms */
     fun abholen() {
-        val v = vis ?: return
-        if (System.currentTimeMillis() - datenSeit < 150) return
-        try {
-            val n = v.captureSize
-            if (abholPuffer.size != n) abholPuffer = ByteArray(n)
-            val f = abholPuffer
-            if (v.getFft(f) == Visualizer.SUCCESS) rechnen(f)
-        } catch (t: Throwable) { }
+        if (vis == null || abholLaeuft) return
+        val jetzt = System.currentTimeMillis()
+        if (jetzt - datenSeit < 150) return
+        abholLaeuft = true
+        datenSeit = jetzt                                   // nicht gleich nochmal
+        h.post {
+            try {
+                val v = vis
+                if (v != null) {
+                    val n = v.captureSize
+                    if (abholPuffer.size != n) abholPuffer = ByteArray(n)
+                    val f = abholPuffer
+                    if (v.getFft(f) == Visualizer.SUCCESS) rechnen(f)
+                }
+            } catch (t: Throwable) { }
+            abholLaeuft = false
+        }
     }
 
     fun aus() {
         nutzer = (nutzer - 1).coerceAtLeast(0)
-        if (nutzer == 0) { try { vis?.enabled = false; vis?.release() } catch (t: Throwable) { }; vis = null; if (stand == "laeuft") stand = "" }
+        if (nutzer == 0) h.post { if (nutzer == 0) freigeben() }
     }
 
     /** Text fuer die Einstellungen */
@@ -169,7 +198,8 @@ internal fun Modifier.musikRing(art: String, spielt: Boolean, farbe: Color, stil
     LaunchedEffect(laeuft, spielt) {
         while (laeuft) {
             withFrameNanos { takt.longValue = it }
-            if (art == "song") kotlinx.coroutines.delay(if (spielt) 45 else 80)
+            // Takt kommt vom Handy hoechstens ~20x pro Sekunde - mehr als 30 Bilder bringen nichts, kosten aber Akku und Ruckler
+            kotlinx.coroutines.delay(if (art == "song") (if (spielt) 45L else 80L) else 25L)
         }
     }
     if (art == "beat") DisposableEffect(spielt && sichtbar) {
@@ -181,7 +211,8 @@ internal fun Modifier.musikRing(art: String, spielt: Boolean, farbe: Color, stil
         while (spielt && sichtbar) { kotlinx.coroutines.delay(2000); Beat.starten(ctx) }
     }
     val werte = remember { FloatArray(BEAT_STRICHE) }
-    return this.drawBehind {
+    // eigene Ebene: pro Bild wird nur der Ring neu gemalt, nicht alles drumherum (Bausteine, Milchglas ...)
+    return this.graphicsLayer().drawBehind {
         val t = (takt.longValue - start).coerceAtLeast(0L) / 1e9f
         val c = Offset(size.width / 2f, size.height / 2f)
         val r0 = size.minDimension / 2f * abstand
@@ -254,8 +285,8 @@ internal fun Modifier.musikSeite(art: String, spielt: Boolean, farbe: Color, sti
     val sichtbar = Sichtbar.an || SperrSeite.sichtbar.value      // auch auf der Sperr-Seite
     val takt = remember { mutableLongStateOf(0L) }
     val laeuft = sichtbar && spielt && art == "beat"
-    LaunchedEffect(laeuft) { while (laeuft) withFrameNanos { takt.longValue = it } }
-    return this.drawBehind {
+    LaunchedEffect(laeuft) { while (laeuft) { withFrameNanos { takt.longValue = it }; kotlinx.coroutines.delay(25) } }
+    return this.graphicsLayer().drawBehind {
         @Suppress("UNUSED_VARIABLE") val tick = takt.longValue
         val c = Offset(size.width / 2f, size.height / 2f)
         val r = size.minDimension / 2f

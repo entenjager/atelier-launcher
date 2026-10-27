@@ -155,6 +155,7 @@ internal fun EigenschaftenBlatt(b: Baustein, onAendern: (Baustein) -> Unit, onZu
                     }
                     // Uhr: eigene Schriftauswahl (Kunst-Schriften) statt der allgemeinen - sonst gab es zwei
                     if (b.typ == "uhr" || b.typ == "uhrklein") UhrSchriftWahl(z.thema.uhr.schrift) { z.uhrSetzen(z.thema.uhr.copy(schrift = it)) }
+                    if (b.typ == "uhr") UhrWechselWahl(z.thema.uhr) { z.uhrSetzen(it) }
                     else Wahl("Schriftart", listOf("" to "Wie im Design") + Designs.nurFrei("schrift", Schriften.EINGEBAUT, o.s("schrift")) + eigene, o.s("schrift")) { setz("schrift", it) }
                     if (alles || b.typ in setOf("termine", "termin", "alphabet"))
                         Wahl("Stärke", listOf("" to "Wie im Design", "0" to "Dünn", "1" to "Normal", "2" to "Fett"), o.s("dicke")) { setz("dicke", it) }

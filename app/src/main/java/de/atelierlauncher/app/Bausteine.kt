@@ -386,9 +386,27 @@ internal fun Modifier.alphabetPlatz(): Modifier {
     val b = SeitenRaster.laden(ctx, "start").firstOrNull { it.typ == "alphabet" } ?: Baustein("alphabet", "alphabet", SeitenRaster.SPALTEN - 3, 16, 3, 63)
     val sp = (breite - START_RAND * 2 + LUECKE) / SeitenRaster.ZELLEN
     fun lg(k: Int) = SeitenRaster.lage(k, sp)
+    val (rs, re) = alphabetAussen()
     return this.leistenAbstand()
-        .padding(start = START_RAND + lg(b.x), top = START_OBEN + lg(b.y))
-        .size(lg(b.x + b.b) - lg(b.x), lg(b.y + b.h) - lg(b.y))
+        .padding(start = START_RAND + lg(b.x) - rs, top = START_OBEN + lg(b.y))
+        .size(lg(b.x + b.b) - lg(b.x) + rs + re, lg(b.y + b.h) - lg(b.y))
+}
+
+/**
+ * Liegt der Alphabet-Baustein ganz aussen im Raster, reicht seine Beruehr-Flaeche bis an den Bildschirmrand
+ * (sonst war der Streifen zwischen Raster und Rand tot - genau da, wo der Daumen gern hinlangt).
+ * Ergebnis: so viel kommt am Anfang / Ende dazu. Die Buchstaben bleiben, wo der Baustein ist.
+ */
+@Composable
+internal fun alphabetAussen(): Pair<androidx.compose.ui.unit.Dp, androidx.compose.ui.unit.Dp> {
+    val ctx = LocalContext.current
+    val breite = androidx.compose.ui.platform.LocalConfiguration.current.screenWidthDp.dp
+    val b = SeitenRaster.laden(ctx, "start").firstOrNull { it.typ == "alphabet" } ?: Baustein("alphabet", "alphabet", SeitenRaster.SPALTEN - 3, 16, 3, 63)
+    val sp = (breite - START_RAND * 2 + LUECKE) / SeitenRaster.ZELLEN
+    val innen = breite - START_RAND * 2
+    val anfang = if (b.x <= 0) START_RAND else 0.dp
+    val ende = if (SeitenRaster.lage(b.x + b.b, sp) >= innen - 1.dp) START_RAND else 0.dp
+    return anfang to ende
 }
 
 @Composable

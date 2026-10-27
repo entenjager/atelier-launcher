@@ -224,25 +224,26 @@ object Schriften {
 
     /** Uhr-Schrift mit Laeufern, die ab und zu abtropfen (TropfZiffern) */
     const val TROPFEN = "kunst_tropfen"
+    /** Glitch: die Striche flimmern (GlitchZiffern) */
+    const val GLITCH = "kunst_rubikglitch"
+    /** 25.10. entfernt - wer sie hatte, bekommt wieder die Schrift vom Design */
+    val ENTFERNT = setOf("kunst_bungeeshade", "kunst_bungeeinline", "kunst_trainone", "kunst_silkscreen", "kunst_monofett", "kunst_zillaslabhighlight")
     /** kuenstlerische Schriften fuer die Uhr (alle SIL Open Font License, aus Google Fonts) */
     val KUNST = listOf(
-        "kunst_monoton" to "Neon", "kunst_bungeeshade" to "Schatten", "kunst_bungeeoutline" to "Umriss", "kunst_bungeeinline" to "Inline",
-        "kunst_bungeehairline" to "Haarlinie", "kunst_trainone" to "Doppellinie", "kunst_rampartone" to "3D-Block", "kunst_codystar" to "Sterne",
+        "kunst_monoton" to "Neon", "kunst_bungeeoutline" to "Umriss", 
+        "kunst_bungeehairline" to "Haarlinie", "kunst_rampartone" to "3D-Block", "kunst_codystar" to "Sterne",
         "kunst_majormonodisplay" to "Mono Display", "kunst_megrim" to "Geometrie", "kunst_orbitron" to "Raumschiff", "kunst_wallpoet" to "Graffiti",
-        "kunst_rubikglitch" to "Glitch", "kunst_silkscreen" to "Pixel", "kunst_vt323" to "Terminal", "kunst_monofett" to "Streifen",
+        "kunst_rubikglitch" to "Glitch", "kunst_vt323" to "Terminal", 
         "kunst_plaster" to "Schablone", "kunst_bebasneue" to "Plakat", "kunst_sixcaps" to "Schmal", "kunst_abrilfatface" to "Mode",
         "kunst_limelight" to "Kino", "kunst_fascinate" to "Varieté", "kunst_shrikhand" to "Retro", "kunst_pacifico" to "Schwung",
         "kunst_sancreek" to "Western", "kunst_ewert" to "Holzschnitt", "kunst_tropfen" to "Tropfen", "kunst_nosifer" to "Grusel", "kunst_frederickathegreat" to "Kreide",
-        "kunst_londrinaoutline" to "Skizze", "kunst_zillaslabhighlight" to "Marker",
+        "kunst_londrinaoutline" to "Skizze",
     )
     /** Schrift-Datei je Uhr-Schrift */
     private val KUNST_ID: Map<String, Int> = mapOf(
         "kunst_monoton" to R.font.kunst_monoton,
-        "kunst_bungeeshade" to R.font.kunst_bungeeshade,
         "kunst_bungeeoutline" to R.font.kunst_bungeeoutline,
-        "kunst_bungeeinline" to R.font.kunst_bungeeinline,
         "kunst_bungeehairline" to R.font.kunst_bungeehairline,
-        "kunst_trainone" to R.font.kunst_trainone,
         "kunst_rampartone" to R.font.kunst_rampartone,
         "kunst_codystar" to R.font.kunst_codystar,
         "kunst_majormonodisplay" to R.font.kunst_majormonodisplay,
@@ -250,9 +251,7 @@ object Schriften {
         "kunst_orbitron" to R.font.kunst_orbitron,
         "kunst_wallpoet" to R.font.kunst_wallpoet,
         "kunst_rubikglitch" to R.font.kunst_rubikglitch,
-        "kunst_silkscreen" to R.font.kunst_silkscreen,
         "kunst_vt323" to R.font.kunst_vt323,
-        "kunst_monofett" to R.font.kunst_monofett,
         "kunst_plaster" to R.font.kunst_plaster,
         "kunst_bebasneue" to R.font.kunst_bebasneue,
         "kunst_sixcaps" to R.font.kunst_sixcaps,
@@ -267,7 +266,6 @@ object Schriften {
         "kunst_tropfen" to R.font.inter_extrabold,          // 25.10.: Tropfen = klare fette Ziffern, die Laeufer malt TropfZiffern
         "kunst_frederickathegreat" to R.font.kunst_frederickathegreat,
         "kunst_londrinaoutline" to R.font.kunst_londrinaoutline,
-        "kunst_zillaslabhighlight" to R.font.kunst_zillaslabhighlight,
     )
 
     val EINGEBAUT = listOf(

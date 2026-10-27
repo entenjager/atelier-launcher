@@ -209,6 +209,7 @@ fun UhrEinstellungen() {
                 }
             }
             UhrSchriftWahl(stil.schrift) { aendern(stil.copy(schrift = it)) }
+            UhrWechselWahl(stil) { aendern(it) }
             UhrMaterialWahl(stil) { aendern(it) }
             var groesseZieh by remember(stil.groesse) { mutableStateOf(stil.groesse.toFloat()) }
             Text("Größe: ${groesseZieh.roundToInt()}", fontSize = 15.sp, modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 12.dp))

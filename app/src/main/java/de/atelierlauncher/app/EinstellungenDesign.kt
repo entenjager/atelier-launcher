@@ -80,7 +80,7 @@ internal fun DesignSeite() {
         Gruppe {
             MenueEintrag("Themes", ("Vorlagen · weitere Designs laden · teilen – aktiv: ") + t.name, rechts = "›") { auf("themen") }
             MenueEintrag("Farben", "Hell/dunkel, Farbschema, Akzent, Wellenfarbe", rechts = "›") { auf("d_farben") }
-            MenueEintrag("Hintergrund & Tiefe", designName(t.hintergrund) + " · 3D · Papier", rechts = "›") { auf("d_hintergrund") }
+            MenueEintrag("Hintergrund & Tiefe", ("Handy-Hintergrund") + " · 3D · Papier", rechts = "›") { auf("d_hintergrund") }
             MenueEintrag("Sperrbildschirm", "Hintergrund", rechts = "›") { auf("d_sperr") }
         }
         Gruppe {
@@ -158,42 +158,19 @@ internal fun DesignHintergrund() {
     fun setze(neu: Thema) = z.themaSetzen(neu)
     @Suppress("UNUSED_VARIABLE") val unbenutzt = Triple(p, navi, ctx)
     VorschauSeite({ MiniLauncher() }) {
+        // Atelier: kein eigener Hintergrund mehr - immer das Hintergrundbild des Handys (beides zusammen war fehleranfaellig)
         Gruppe("Hintergrund") {
-            Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal = 8.dp, vertical = 4.dp)) {
-                listOf("bild", "video", "marmor", "papier", "glas", "swiss", "geld", "wellen", "eis", "pixel", "sterne", "polar", "schwarz", "system", "lottie")
-                    .filter { Designs.frei("hintergrund", it) || (it == t.hintergrund && !Designs.raus("hintergrund", it)) }.forEach { art ->
-                    DesignKachel(art, t.hintergrund == art) {
-                        setze(t.copy(hintergrund = art))
-                        if (art == "video" && !EigeneDateien.video(ctx).exists()) videoWaehlen(ctx)
-                        if (art == "bild" && !EigeneDateien.bild(ctx).exists()) bildWaehlen(ctx)
-                        if (art == "lottie" && !EigeneDateien.lottie(ctx).exists()) lottieWaehlen(ctx)
-                        if (art == "glas" && !GlasFoto.datei(ctx).exists()) glasFotoWaehlen(ctx)
-                    }
-                }
+            val hgPrefs = remember { ctx.getSharedPreferences("launcher", Context.MODE_PRIVATE) }
+            var ziel by remember { mutableStateOf(hgPrefs.getString("hgZiel", "beide") ?: "beide") }
+            Wahl("Hintergrundbild für", listOf("start" to "Start", "sperre" to "Sperre", "beide" to "Beide"), ziel) {
+                ziel = it; hgPrefs.edit().putString("hgZiel", it).apply()
             }
-            when (t.hintergrund) {
-                "video" -> MenueEintrag("Video wählen …", "Aus der Galerie oder den Dateien – läuft stumm in Schleife") { videoWaehlen(ctx) }
-                "bild" -> MenueEintrag("Bild wählen …", "Aus der Galerie oder den Dateien") { bildWaehlen(ctx) }
-                "lottie" -> MenueEintrag("Lottie-Datei wählen …", "JSON – der Daumen am Alphabet steuert sie") { lottieWaehlen(ctx) }
-                "glas" -> {
-                    @Suppress("UNUSED_VARIABLE") val neu = z.eigenStand + GlasFoto.stand.intValue
-                    val da = GlasFoto.datei(ctx).exists()
-                    MenueEintrag(if (da) "Anderes Hintergrundbild …" else "Hintergrundbild wählen …",
-                                 "Am besten dasselbe Bild wie dein Handy-Hintergrund – das Glas bricht genau dieses Bild") { glasFotoWaehlen(ctx) }
-                    if (da) MenueEintrag("Bild entfernen", "Dann wieder weiche Farbflächen") { glasFotoWeg(ctx) }
-                }
+            MenueEintrag("Hintergrundbild wählen …", "Aus der Galerie – " + when (ziel) {
+                "start" -> "nur für den Startbildschirm"; "sperre" -> "nur für den Sperrbildschirm"; else -> "für Start- und Sperrbildschirm" }, rechts = "›") {
+                (ctx as? MainActivity)?.galerieHintergrund(ziel)
             }
-            if (t.hintergrund == "eis" || t.hintergrund == "pixel") {
-                Text(if (t.hintergrund == "eis") "Farbe der Eis-Zacken" else "Farbe der Pixel", fontSize = 15.sp, modifier = Modifier.padding(start = 20.dp, top = 8.dp))
-                val liste = (if (t.hintergrund == "eis") EIS_FARBEN else PIXEL_FARBEN).map { it.second } + p.akzent.toArgb()
-                if (t.hintergrund == "eis") FarbReihe(liste, z.eisFarbe) { z.eisFarbeSetzen(it) }
-                else FarbReihe(liste, z.pixelFarbe) { z.pixelFarbeSetzen(it) }
-            }
-            if (t.hintergrund in setOf("wellen", "eis", "pixel") || (t.alphabet == "welle" && !z.eigeneDaumenEbene)) {
+            if (t.alphabet == "welle" && !z.eigeneDaumenEbene)
                 Schalter("Zeigt den Akku", z.wellenAkku, "Leerer Akku = kürzere Wellen") { z.wellenSetzen("wellenAkku", it) }
-            }
-            if (t.hintergrund == "eis") Schalter("Schnee", z.eisSchnee, "Schnee zwischen den Zacken") { z.eisSchneeSetzen(it) }
-            MenueEintrag("Auch auf den Startbildschirm-Hintergrund", "Live-Hintergrund mit diesem Hintergrund") { (ctx as MainActivity).wellenTapete() }
         }
         Gruppe("Tiefe") {
             val prefs = remember { ctx.getSharedPreferences("launcher", Context.MODE_PRIVATE) }
@@ -229,29 +206,7 @@ internal fun DesignSperr() {
     var uebergang by remember { mutableStateOf(SperrSeite.art(ctx)) }
     VorschauSeite({ MiniSperr(seite, uebergang) }) {
         Gruppe("Hintergrund") {
-            run {
-                val prefs = remember { ctx.getSharedPreferences("launcher", Context.MODE_PRIVATE) }
-                @Suppress("UNUSED_VARIABLE") val neuDatei = z.eigenStand
-                var medium by remember { mutableStateOf(SperrMedium.art(ctx)) }
-                Wahl("Sperrbildschirm zeigt", listOf("" to "Design", "bild" to "Eigenes Bild", "video" to "Eigenes Video"), medium,
-                     when (medium) {
-                         "bild" -> "Ein Bild aus der Galerie oder den Dateien – nur auf dem Sperrbildschirm"
-                         "video" -> "Ein Video, stumm in Schleife – läuft über den Live-Hintergrund von ${Variante.appName}"
-                         else -> null
-                     }) {
-                    medium = it; SperrMedium.setzen(ctx, it)
-                    if (it == "bild" && !EigeneDateien.sperrBild(ctx).exists()) sperrBildWaehlen(ctx)
-                    if (it == "video" && !EigeneDateien.sperrVideo(ctx).exists()) sperrVideoWaehlen(ctx)
-                }
-                if (medium == "bild") MenueEintrag(if (EigeneDateien.sperrBild(ctx).exists()) "Anderes Bild wählen …" else "Bild wählen …",
-                                                   "Galerie oder Dateien", rechts = "›") { sperrBildWaehlen(ctx) }
-                if (medium == "video") {
-                    MenueEintrag(if (EigeneDateien.sperrVideo(ctx).exists()) "Anderes Video wählen …" else "Video wählen …", "Galerie oder Dateien", rechts = "›") { sperrVideoWaehlen(ctx) }
-                    if (!SperrMedium.liveAktiv(ctx)) MenueEintrag("Live-Hintergrund einschalten", "Einmal nötig – dort „Start- und Sperrbildschirm“ wählen", rechts = "›") {
-                        (ctx as MainActivity).wellenTapete()
-                    }
-                }
-            }
+            // Atelier: kein eigenes Bild / Video auf dem Sperrbildschirm (nur das Hintergrundbild des Handys)
             if (SperrMedium.art(ctx) == "") run {
                 val prefs = remember { ctx.getSharedPreferences("launcher", Context.MODE_PRIVATE) }
                 var bild by remember { mutableStateOf(SperrBild.an(ctx)) }

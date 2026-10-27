@@ -42,6 +42,8 @@ data class UhrStil(
     val material: String = "",      // "" normal | "glas" (Liquid Glass)
     val glasBlur: Int = 0,          // Weichzeichnen im Glas (dp)
     val glasBrechung: Int = 100,    // wie stark der Rand den Hintergrund verbiegt (%)
+    val wechsel: String = "",       // Animation beim Wechsel: "" passend zur Schrift | "keine" | "schreiben" | "fliegen"
+    val wechselDauer: Int = 100,    // Laenge der Wechsel-Animation in Prozent (100 = normal)
 )
 
 /** Was die Kopfzeile unter der Uhr zeigt */
@@ -85,7 +87,7 @@ fun wellenFarbe(eigen: Int, dunkel: Boolean): Int =
 fun UhrStil.json() = JSONObject()
     .put("groesse", groesse).put("dicke", dicke).put("farbe", farbe).put("sekunden", sekunden)
     .put("datum", datum).put("akku", akku).put("mittig", mittig).put("gestapelt", gestapelt).put("schrift", schrift)
-    .put("material", material).put("glasBlur", glasBlur).put("glasBrechung", glasBrechung)
+    .put("material", material).put("glasBlur", glasBlur).put("glasBrechung", glasBrechung).put("wechsel", wechsel).put("wechselDauer", wechselDauer)
 
 fun uhrStilAus(o: JSONObject?): UhrStil {
     if (o == null) return UhrStil()
@@ -96,10 +98,12 @@ fun uhrStilAus(o: JSONObject?): UhrStil {
         datum = o.optBoolean("datum", d.datum), akku = o.optBoolean("akku", d.akku),
         mittig = o.optBoolean("mittig", d.mittig), gestapelt = o.optBoolean("gestapelt", d.gestapelt),
         // 24.10. gab es kurz "Tropfen" als Material bzw. Design - jetzt ist es eine Schrift der Uhr
-        schrift = if (o.optString("material") == "tropfen" || o.optString("design") == "tropfen") Schriften.TROPFEN else o.optString("schrift", d.schrift),
+        schrift = if (o.optString("material") == "tropfen" || o.optString("design") == "tropfen") Schriften.TROPFEN else o.optString("schrift", d.schrift).let { if (it in Schriften.ENTFERNT) "" else it },
         // "tropfen" war kurz ein Material - jetzt ein eigenes Design
         material = o.optString("material", d.material).let { if (it == "tropfen") "" else it }, glasBlur = o.optInt("glasBlur", d.glasBlur),
         glasBrechung = o.optInt("glasBrechung", d.glasBrechung),
+        wechsel = o.optString("wechsel", d.wechsel),
+        wechselDauer = o.optInt("wechselDauer", d.wechselDauer).coerceIn(25, 300),
     )
 }
 

@@ -28,13 +28,7 @@ Copyright © 2010 by Dharma Type.
 kunst_bungeehairline.ttf:
 Copyright 2023 The Bungee Project Authors (https://github.com/djrrb/Bungee)
 
-kunst_bungeeinline.ttf:
-Copyright 2023 The Bungee Project Authors (https://github.com/djrrb/Bungee)
-
 kunst_bungeeoutline.ttf:
-Copyright 2023 The Bungee Project Authors (https://github.com/djrrb/Bungee)
-
-kunst_bungeeshade.ttf:
 Copyright 2023 The Bungee Project Authors (https://github.com/djrrb/Bungee)
 
 kunst_codystar.ttf:
@@ -68,9 +62,6 @@ Copyright 2018 The Major Mono Project Authors (https://github.com/googlefonts/ma
 kunst_megrim.ttf:
 Copyright (c) 2009, 2010, 2011 Daniel Johnson (<il.basso.buffo@gmail.com>).
 
-kunst_monofett.ttf:
-Copyright 2010 The Monofett Project Authors (https://github.com/googlefonts/monofett), with Reserved Font Name Monofett.
-
 kunst_monoton.ttf:
 Copyright (c) 2011 by vernon adams (vern@newtypography.co.uk),
 with Reserved Font Names "Monoton"
@@ -101,15 +92,9 @@ Copyright 2011 The Sancreek Project Authors (https://github.com/googlefonts/sanc
 kunst_shrikhand.ttf:
 Copyright (c) 2015 Jonny Pinhorn (jonpinhorn.typedesign@gmail.com)
 
-kunst_silkscreen.ttf:
-Copyright 2001 The Silkscreen Project Authors (https://github.com/googlefonts/silkscreen)
-
 kunst_sixcaps.ttf:
 Copyright (c) 2011, Vernon Adams (vern@newtypography.co.uk),
 with Reserved Font Name "Six Caps" "SixCaps".
-
-kunst_trainone.ttf:
-Copyright 2020 The Train Project Authors (https://github.com/fontworks-fonts/Train)
 
 kunst_vt323.ttf:
 Copyright 2011, The VT323 Project Authors (peter.hull@oikoi.com)
@@ -117,9 +102,6 @@ Copyright 2011, The VT323 Project Authors (peter.hull@oikoi.com)
 kunst_wallpoet.ttf:
 Copyright (c) 6 April 2011, Lars Berggren (lars@punktlars.se),
 with Reserved Font Name Wallpoet.
-
-kunst_zillaslabhighlight.ttf:
-Copyright 2017, The Mozilla Foundation
 
 michroma.ttf:
 Copyright 2011 The Michroma Project Authors (https://github.com/googlefonts/Michroma-font)

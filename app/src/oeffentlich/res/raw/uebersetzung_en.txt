@@ -327,7 +327,6 @@ Piktogramme	Pictograms
 Einfarbig	Monochrome
 Nur Motiv (s/w)	Motif only (b/w)
 Punkte	Dots
-Keine	None
 Vorlagen	Templates
 Meine Themes	My themes
 Aktuelles Aussehen speichern	Save current look
@@ -1168,4 +1167,28 @@ Aktualisiert ✓	Updated ✓
 Abgebrochen – nochmal antippen	Cancelled – tap again
 Passt nicht zu dieser Installation (anders signiert) – Atelier einmal von GitHub neu installieren	Doesn't match this installation (signed differently) – install Atelier from GitHub once
 Zu wenig Speicher	Not enough storage
+Animation beim Wechsel	Animation on change
+Passend zur Schrift ({0})	Matching the font ({0})
+Keine	None
+keine	none
+Schreiben	Typing
+Fliegen	Flying
+Schreiben: ein Strich wie am PC löscht die alten Ziffern und tippt die neuen. Fliegen: die Teile der alten Ziffer fliegen weg, die neuen fliegen ein.	Typing: a cursor like on a PC deletes the old digits and types the new ones. Flying: the pieces of the old digit fly away, the new ones fly in.
+Länge der Animation	Animation length
+Hintergrundbild des Handys	Phone wallpaper
+{0} zeigt immer dein Handy-Hintergrundbild – hier änderst du es	{0} always shows your phone wallpaper – change it here
+Handy-Hintergrund	Phone wallpaper
+Handy-Hintergrund · 3D · Papier	Phone wallpaper · 3D · Paper
+Hintergrundbild wählen …	Choose wallpaper …
+Aus der Galerie – wird das Hintergrundbild des Handys (Startbildschirm)	From the gallery – becomes the phone wallpaper (home screen)
+Hintergrund gesetzt	Wallpaper set
+Das Bild ließ sich nicht setzen	Couldn't set the picture
+Hintergrundbild für	Wallpaper for
+Start	Home
+Sperre	Lock
+Beide	Both
+Aus der Galerie – {0}	From the gallery – {0}
+nur für den Startbildschirm	home screen only
+nur für den Sperrbildschirm	lock screen only
+für Start- und Sperrbildschirm	home and lock screen
 Wetter & Termine	Weather & dates

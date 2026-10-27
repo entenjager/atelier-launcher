@@ -218,104 +218,119 @@ data class MusikInfo(val titel: String, val kuenstler: String, val bild: ImageBi
 object Musik {
     var info by mutableStateOf<MusikInfo?>(null)
     var erlaubt by mutableStateOf(false)
-    private var msm: MediaSessionManager? = null
-    private var controller: MediaController? = null
+    @Volatile private var msm: MediaSessionManager? = null
+    @Volatile private var controller: MediaController? = null
     private var letztesBild: Pair<String, ImageBitmap?>? = null
-    private var coverArbeit: String? = null
+
+    // Alles Lesen bei der Musik-App laeuft auf einem eigenen Faden: jede Abfrage ist eine Anfrage an die
+    // andere App, und die Metadaten tragen das Cover in voller Groesse mit (MB-gross). Beim Musikstart kommen
+    // viele Meldungen kurz hintereinander - auf dem Haupt-Faden hat das alles ruckeln lassen.
+    private val faden by lazy { android.os.HandlerThread("Musik").also { it.start() } }
+    private val h by lazy { Handler(faden.looper) }
+    private val haupt = Handler(Looper.getMainLooper())
+    // zuletzt gemeldet (vom Rueckruf mitgeliefert - nicht jedes Mal neu bei der App abfragen)
+    @Volatile private var meta: MediaMetadata? = null
+    @Volatile private var letzterStand: PlaybackState? = null
+    @Volatile private var letzteDauer = 0L
 
     private val rueckruf = object : MediaController.Callback() {
-        override fun onPlaybackStateChanged(state: PlaybackState?) = aktualisieren()
-        override fun onMetadataChanged(metadata: MediaMetadata?) = aktualisieren()
+        override fun onPlaybackStateChanged(state: PlaybackState?) { letzterStand = state; aktualisieren() }
+        override fun onMetadataChanged(metadata: MediaMetadata?) { meta = metadata; aktualisieren() }
         override fun onSessionDestroyed() {
             try { waehle(msm?.let { m -> komponente?.let { m.getActiveSessions(it) } }) }
-            catch (e: Exception) { controller = null; info = null }   // z. B. Zugriff inzwischen entzogen
+            catch (e: Exception) { controller = null; setzeInfo(null) }   // z. B. Zugriff inzwischen entzogen
         }
     }
     private val sitzungen = MediaSessionManager.OnActiveSessionsChangedListener { waehle(it) }
-    private var komponente: ComponentName? = null
+    @Volatile private var komponente: ComponentName? = null
 
     fun hatRecht(ctx: Context) = NotificationManagerCompat.getEnabledListenerPackages(ctx).contains(ctx.packageName)
+
+    private fun setzeInfo(i: MusikInfo?) { haupt.post { if (info != i) info = i } }
 
     fun start(ctx: Context) {
         erlaubt = hatRecht(ctx)
         if (!erlaubt) { stop(); info = null; return }
-        try {
-            val m = msm ?: ctx.applicationContext.getSystemService(MediaSessionManager::class.java) ?: return
-            val k = ComponentName(ctx, Lauscher::class.java)
-            msm = m; komponente = k
-            m.removeOnActiveSessionsChangedListener(sitzungen)
-            m.addOnActiveSessionsChangedListener(sitzungen, k)
-            waehle(m.getActiveSessions(k))
-        } catch (e: SecurityException) {
-            erlaubt = false; info = null
-        } catch (e: Exception) { }
+        val app = ctx.applicationContext
+        h.post {
+            try {
+                val m = msm ?: app.getSystemService(MediaSessionManager::class.java) ?: return@post
+                val k = ComponentName(app, Lauscher::class.java)
+                msm = m; komponente = k
+                m.removeOnActiveSessionsChangedListener(sitzungen)
+                m.addOnActiveSessionsChangedListener(sitzungen, k, h)
+                waehle(m.getActiveSessions(k))
+            } catch (e: SecurityException) {
+                haupt.post { erlaubt = false; info = null }
+            } catch (e: Exception) { }
+        }
     }
 
     fun stop() {
-        try { msm?.removeOnActiveSessionsChangedListener(sitzungen) } catch (e: Exception) { }
-        controller?.unregisterCallback(rueckruf)
+        val m = msm; val c = controller
         controller = null
+        h.post {
+            try { m?.removeOnActiveSessionsChangedListener(sitzungen) } catch (e: Exception) { }
+            try { c?.unregisterCallback(rueckruf) } catch (e: Exception) { }
+        }
     }
 
+    /** laeuft auf dem Musik-Faden */
     private fun waehle(liste: List<MediaController>?) {
         // lieber eine Sitzung mit Titel (manche Apps melden leere Sitzungen) - spielende zuerst
-        fun hatTitel(c: MediaController) = !(c.metadata?.getString(MediaMetadata.METADATA_KEY_TITLE) ?: c.metadata?.description?.title?.toString()).isNullOrBlank()
-        val neu = liste?.firstOrNull { it.playbackState?.state == PlaybackState.STATE_PLAYING && hatTitel(it) }
-            ?: liste?.firstOrNull { it.playbackState?.state == PlaybackState.STATE_PLAYING }
+        val metas = liste?.associateWith { try { it.metadata } catch (e: Exception) { null } } ?: emptyMap()
+        val staende = liste?.associateWith { try { it.playbackState } catch (e: Exception) { null } } ?: emptyMap()
+        fun hatTitel(c: MediaController) = metas[c].let { md -> !(md?.getString(MediaMetadata.METADATA_KEY_TITLE) ?: md?.description?.title?.toString()).isNullOrBlank() }
+        fun spielt(c: MediaController) = staende[c]?.state == PlaybackState.STATE_PLAYING
+        val neu = liste?.firstOrNull { spielt(it) && hatTitel(it) }
+            ?: liste?.firstOrNull { spielt(it) }
             ?: liste?.firstOrNull { hatTitel(it) } ?: liste?.firstOrNull()
         if (neu?.sessionToken != controller?.sessionToken) {
-            controller?.unregisterCallback(rueckruf)
+            try { controller?.unregisterCallback(rueckruf) } catch (e: Exception) { }
             controller = neu
-            neu?.registerCallback(rueckruf, Handler(Looper.getMainLooper()))
+            neu?.registerCallback(rueckruf, h)
         }
+        meta = neu?.let { metas[it] }; letzterStand = neu?.let { staende[it] }
         aktualisieren()
     }
 
+    /** laeuft auf dem Musik-Faden: aus dem zuletzt Gemeldeten die Anzeige bauen */
     private fun aktualisieren() {
         val c = controller
-        val md = c?.metadata
+        val md = meta
         val titel = md?.getString(MediaMetadata.METADATA_KEY_TITLE) ?: md?.description?.title?.toString()
-        if (c == null || titel.isNullOrBlank()) { info = null; return }
+        if (c == null || titel.isNullOrBlank()) { setzeInfo(null); return }
         val kuenstler = md?.getString(MediaMetadata.METADATA_KEY_ARTIST)
             ?: md?.getString(MediaMetadata.METADATA_KEY_ALBUM_ARTIST) ?: md?.description?.subtitle?.toString() ?: ""
         val schluessel = c.packageName + titel
         val bild = letztesBild?.takeIf { it.first == schluessel }?.second ?: run {
-            // Cover verkleinern im Hintergrund (lag beim Songwechsel auf dem Haupt-Faden = Hänger, gemessen).
-            // Solange: altes Cover weiter zeigen, danach neu anzeigen.
+            // Cover einmal pro Lied verkleinern (hier im Hintergrund)
             val b = md?.getBitmap(MediaMetadata.METADATA_KEY_ALBUM_ART) ?: md?.getBitmap(MediaMetadata.METADATA_KEY_ART)
-            if (b == null) { letztesBild = schluessel to null; null }
-            else {
-                if (coverArbeit != schluessel) {
-                    coverArbeit = schluessel
-                    Thread {
-                        val klein = try {
-                            val f = 256f / maxOf(b.width, b.height)
-                            (if (f < 1f) Bitmap.createScaledBitmap(b, (b.width * f).toInt().coerceAtLeast(1), (b.height * f).toInt().coerceAtLeast(1), true) else b)
-                                .also { it.prepareToDraw() }.asImageBitmap()
-                        } catch (e: Exception) { null }
-                        Handler(Looper.getMainLooper()).post {
-                            if (coverArbeit == schluessel) { letztesBild = schluessel to klein; coverArbeit = null; aktualisieren() }
-                        }
-                    }.start()
-                }
-                info?.bild           // bis dahin das bisherige Cover
-            }
+            val klein = if (b == null) null else try {
+                val f = 256f / maxOf(b.width, b.height)
+                (if (f < 1f) Bitmap.createScaledBitmap(b, (b.width * f).toInt().coerceAtLeast(1), (b.height * f).toInt().coerceAtLeast(1), true) else b)
+                    .also { it.prepareToDraw() }.asImageBitmap()
+            } catch (e: Exception) { null }
+            letztesBild = schluessel to klein
+            klein
         }
-        val st = c.playbackState?.state
+        val stand = letzterStand
+        val st = stand?.state
         val spielt = st == PlaybackState.STATE_PLAYING || st == PlaybackState.STATE_BUFFERING
-        info = MusikInfo(titel, kuenstler, bild, spielt, c.packageName)
+        letzteDauer = try { md?.getLong(MediaMetadata.METADATA_KEY_DURATION) ?: 0L } catch (e: Exception) { 0L }
+        setzeInfo(MusikInfo(titel, kuenstler, bild, spielt, c.packageName))
     }
 
     /** im Lied spulen (ms, + vor / - zurueck). Mehrere Schritte kurz hintereinander bauen aufeinander auf. */
     private var spulZiel = -1L; private var spulZeit = 0L
     fun spulen(ms: Long) {
         val c = controller ?: return
-        val ps = c.playbackState ?: return
+        val ps = letzterStand ?: return
         val jetzt = android.os.SystemClock.elapsedRealtime()
         val spielt = ps.state == PlaybackState.STATE_PLAYING
         var pos = if (spulZiel >= 0 && jetzt - spulZeit < 2500) spulZiel + (if (spielt) jetzt - spulZeit else 0L)
                   else ps.position + (if (spielt && ps.lastPositionUpdateTime > 0) ((jetzt - ps.lastPositionUpdateTime) * ps.playbackSpeed).toLong() else 0L)
-        val dauer = try { c.metadata?.getLong(MediaMetadata.METADATA_KEY_DURATION) ?: 0L } catch (e: Exception) { 0L }
+        val dauer = letzteDauer
         pos = (pos + ms).coerceAtLeast(0L)
         if (dauer > 0) pos = pos.coerceAtMost(dauer - 1000L)
         spulZiel = pos; spulZeit = jetzt
@@ -324,10 +339,10 @@ object Musik {
 
     /** wie weit der Song ist (0..1) - null, wenn die App keine Laenge meldet */
     fun fortschritt(): Float? {
-        val c = controller ?: return null
-        val dauer = try { c.metadata?.getLong(MediaMetadata.METADATA_KEY_DURATION) ?: 0L } catch (e: Exception) { 0L }
+        if (controller == null) return null
+        val dauer = letzteDauer
         if (dauer <= 0L) return null
-        val ps = c.playbackState ?: return null
+        val ps = letzterStand ?: return null
         var pos = ps.position
         if (ps.state == PlaybackState.STATE_PLAYING && ps.lastPositionUpdateTime > 0)
             pos += ((android.os.SystemClock.elapsedRealtime() - ps.lastPositionUpdateTime) * ps.playbackSpeed).toLong()

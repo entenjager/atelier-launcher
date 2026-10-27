@@ -68,6 +68,17 @@ class IconBild(val bild: ImageBitmap, val maske: Boolean)
 object IconSpeicher {
     val icons = mutableStateMapOf<String, IconBild>()
     val punkte = mutableStateMapOf<String, Color>()     // Punkt-Farbe je App (Stil "Punkte")
+
+    /**
+     * Vorwaermen: Android wirft die Icons nach laengerer Pause aus dem Grafikspeicher. Beim ersten Wischen
+     * uebers Alphabet mussten dann alle auf einmal neu hochgeladen werden (= kurzes Ruckeln).
+     * prepareToDraw() laedt sie schon vorher still im Hintergrund (Render-Faden) wieder hoch.
+     */
+    fun vorwaermen() {
+        try { icons.values.toList() } catch (e: Exception) { return }.forEach {
+            try { it.bild.asAndroidBitmap().prepareToDraw() } catch (e: Exception) { }
+        }
+    }
 }
 
 // ---------------------------------------------------------------- Icon-Pakete
@@ -176,7 +187,10 @@ fun zeichne(d: Drawable, px: Int): Bitmap = d.toBitmap(px, px, Bitmap.Config.ARG
  */
 class AppLader(private val akt: MainActivity, private val z: Zustand) {
     private val pm = akt.packageManager
-    private val arbeiter = Executors.newSingleThreadExecutor()
+    // niedrige Prioritaet: Icons/Liste im Hintergrund duerfen das Alphabet nie ausbremsen
+    private val arbeiter = Executors.newSingleThreadExecutor { r ->
+        Thread({ android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_BACKGROUND); r.run() }, "AppLader")
+    }
     /** Activity weg -> Arbeits-Thread beenden (haelt sonst die alte Activity fest) */
     fun ende() {
         try { akt.getSystemService(LauncherApps::class.java)?.unregisterCallback(paketMelder) } catch (e: Exception) { }

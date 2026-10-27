@@ -486,7 +486,7 @@ fun Launcher() {
                 androidx.compose.foundation.Canvas(Modifier.fillMaxSize()) { drawRect(pinsel) }
             }
             // Kreiswellen, wo der Daumen das Alphabet beruehrt (nicht abgedunkelt)
-            TropfenSchicht(Modifier.fillMaxSize(), Color(wellenFarbe(z.thema.welle, p.dunkel)))
+            TropfenSchicht(Modifier.fillMaxSize().graphicsLayer(), Color(wellenFarbe(z.thema.welle, p.dunkel)))
             // neue Nachricht: kleine Welle von oben in der App-Farbe (Form wie "Hinter dem Alphabet")
             if (z.benWelle && modus == Modus.START && ebenen.isEmpty()) BenachrichtigungsSchicht(
                 Modifier.fillMaxSize(),
@@ -860,7 +860,7 @@ internal fun UhrBlock(modifier: Modifier) {
             transformOrigin = androidx.compose.ui.graphics.TransformOrigin(0f, 0f)
         }) { Kopf(oben = 0.dp) } },
         // Tropfen-Schrift: unten nicht abschneiden - dort haengen die Tropfen
-        modifier = if (LocalZustand.current.thema.uhr.schrift == Schriften.TROPFEN) modifier else modifier.clipToBounds(),
+        modifier = if (LocalZustand.current.thema.uhr.let { u -> u.schrift == Schriften.TROPFEN || u.schrift == Schriften.GLITCH || uhrWechsel(u) != "keine" }) modifier else modifier.clipToBounds(),
     ) { teile, c ->
         val w = c.maxWidth; val h = c.maxHeight
         // natuerliche Breite: so breit, wie die Ziffern (bzw. das Datum) wirklich sind
@@ -1395,6 +1395,11 @@ fun AlphabetStrich(
     // wie weit der Daumen links neben dem Alphabet ist (px) - der Bogen geht so weit mit, dass man es immer sieht
     val zug = remember { mutableFloatStateOf(0f) }
     val daumen = with(LocalDensity.current) { 64.dp.toPx() }      // ungefaehr eine Daumenbreite
+    val halbeSpalte = with(LocalDensity.current) { 22.dp.toPx() }  // halbe Breite der Buchstaben-Spalte
+    // Atelier: ganz aussen reicht die Beruehr-Flaeche bis an den Bildschirmrand (Buchstaben bleiben im Baustein)
+    val (randAnfang, randEnde) = alphabetAussen()
+    val randAnfangPx by rememberUpdatedState(with(LocalDensity.current) { randAnfang.toPx() })
+    val randEndePx by rememberUpdatedState(with(LocalDensity.current) { randEnde.toPx() })
     val daumenAnlauf = with(LocalDensity.current) { 32.dp.toPx() }
     val staerke = remember { Animatable(0f) }
     var beruehrt by remember { mutableStateOf(false) }
@@ -1464,7 +1469,12 @@ fun AlphabetStrich(
                         // Abstand links vom Alphabet; sobald der Daumen nach links zieht, kommt eine Daumenbreite dazu,
                         // damit die Buchstaben links NEBEN dem Daumen stehen und nicht darunter
                         // gespiegelt: Alphabet steht links, der Daumen zieht nach rechts
-                        val links = (if (rtl) x - size.width else -x).coerceAtLeast(0f)
+                        // gemessen ab der Buchstaben-Spalte (Mitte des Bausteins), nicht ab dem Rand des Bausteins -
+                        // sonst musste man bei einem breiten Alphabet-Baustein erst ganz aus ihm heraus, bevor etwas passiert
+                        val innenBreite = size.width - randAnfangPx - randEndePx
+                        val mitte = (if (rtl) randEndePx else randAnfangPx) + innenBreite / 2f
+                        val halb = minOf(innenBreite / 2f, halbeSpalte)
+                        val links = (if (rtl) x - (mitte + halb) else (mitte - halb) - x).coerceAtLeast(0f)
                         WellenReiz.fingerY = yAbs
                         if (daumenAn || kanteAn) { WellenReiz.daumenY = yAbs; WellenReiz.zug = links
                                         if (kanteAn) WellenReiz.kanteDa = true else WellenReiz.daumenDa = true
@@ -1534,7 +1544,7 @@ fun AlphabetStrich(
             .offset { IntOffset(0, verschub.floatValue.roundToInt()) }
             .then(if (Glas.an) Modifier.glas(18.dp, staerke = 0.6f) else Modifier)
     ) {
-        Column(Modifier.fillMaxSize()) {
+        Column(Modifier.fillMaxSize().padding(start = randAnfang, end = randEnde)) {
             val swiss = Stil.alphabetSwiss
             buchstaben.forEachIndexed { i, b ->
                 Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {

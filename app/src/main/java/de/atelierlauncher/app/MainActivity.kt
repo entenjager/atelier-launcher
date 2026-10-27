@@ -45,6 +45,12 @@ object Sichtbar {
 }
 
 class MainActivity : ComponentActivity() {
+    /** Entwickler (nur Atelier, nur per USB): adb shell dumpsys activity <paket> standard -> Aussehen/Anordnung ohne Persoenliches */
+    override fun dump(prefix: String, fd: java.io.FileDescriptor?, writer: java.io.PrintWriter, args: Array<out String>?) {
+        if (args?.contains("standard") == true) { writer.println(StandardExport.text(this)); return }
+        super.dump(prefix, fd, writer, args)
+    }
+
     lateinit var z: Zustand
     private lateinit var lader: AppLader
     private val intern by lazy { getSharedPreferences("intern", Context.MODE_PRIVATE) }
@@ -66,6 +72,40 @@ class MainActivity : ComponentActivity() {
 
     // ---- allgemeine Dateiauswahl (Video, Lottie, Code-Dateien)
     private var dateiFertig: ((Uri) -> Unit)? = null
+    /** Atelier: Bild aus der Galerie direkt als Hintergrundbild des Handys setzen ("start", "sperre" oder "beide") */
+    private var hgZiel = "beide"
+    private val galerieWahl = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { r ->
+        val uri = r.data?.data ?: return@registerForActivityResult
+        val app = applicationContext
+        Thread {
+            val ok = try {
+                contentResolver.openInputStream(uri)?.use {
+                    val wm = android.app.WallpaperManager.getInstance(app)
+                    val flags = when (hgZiel) {
+                        "start" -> android.app.WallpaperManager.FLAG_SYSTEM
+                        "sperre" -> android.app.WallpaperManager.FLAG_LOCK
+                        else -> android.app.WallpaperManager.FLAG_SYSTEM or android.app.WallpaperManager.FLAG_LOCK
+                    }
+                    wm.setStream(it, null, true, flags)
+                } != null
+            } catch (e: Exception) { false }
+            runOnUiThread {
+                android.widget.Toast.makeText(this, Sprache.tr(if (ok) "Hintergrund gesetzt" else "Das Bild ließ sich nicht setzen"), android.widget.Toast.LENGTH_SHORT).show()
+            }
+        }.start()
+    }
+
+    fun galerieHintergrund(ziel: String) {
+        hgZiel = ziel
+        val galerie = android.content.Intent(android.content.Intent.ACTION_PICK)
+            .setDataAndType(android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*")
+        try { galerieWahl.launch(galerie) }
+        catch (e: Exception) {
+            // keine Galerie-App: Android-Bildauswahl
+            try { galerieWahl.launch(android.content.Intent(android.content.Intent.ACTION_GET_CONTENT).setType("image/*")) } catch (e2: Exception) { }
+        }
+    }
+
     private val dateiWahl = registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         val f = dateiFertig; dateiFertig = null
         val zweck = intern.getString("dateiZweck", null)
@@ -360,7 +400,9 @@ class MainActivity : ComponentActivity() {
             Randgesten.launcherVorne(true); if (Neigung.an(this)) Neigung.launcher.start(this)
             EigeneBausteine.alleAnhalten(true)
             Beat.starten(this)                  // falls Musik-Ring / Alphabet-Musik es brauchen (sonst passiert nichts)
-            lader.wennNoetig()                  // nur bei gemeldeter Aenderung oder nach 10 Minuten
+            IconSpeicher.vorwaermen()           // Icons wieder in den Grafikspeicher, bevor man das Alphabet anfasst
+            // App-Liste pruefen erst etwas spaeter - nicht genau dann, wenn man gleich uebers Alphabet wischt
+            nachBildHandler.postDelayed({ if (Sichtbar.vorne) lader.wennNoetig() }, 2500)    // nur bei Aenderung oder nach 10 Minuten
             z.fortsetzen++
             Kalender.erlaubt = Kalender.hatRecht(this)
             // Kalender hoechstens alle 5 Minuten (die Startseite laedt ihn sonst ohnehin regelmaessig)

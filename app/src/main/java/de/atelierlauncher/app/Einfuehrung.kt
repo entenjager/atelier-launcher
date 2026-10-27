@@ -204,9 +204,9 @@ internal fun UeberSeite() {
                "Michroma" to "The Michroma Project Authors").forEach { (n, wer) ->
             Text("$n – © $wer, SIL Open Font License 1.1", color = p.leise, fontSize = 14.sp, lineHeight = 19.sp)
         }
-        Text("Uhr-Schriften: Monoton, Bungee (Shade, Outline, Inline, Hairline), Train One, Rampart One, Codystar, Major Mono Display, Megrim, " +
-             "Orbitron, Wallpoet, Rubik Glitch, Silkscreen, VT323, Monofett, Plaster, Bebas Neue, Six Caps, Abril Fatface, Limelight, Fascinate, " +
-             "Shrikhand, Pacifico, Sancreek, Ewert, Nosifer, Fredericka the Great, Londrina Outline, Zilla Slab Highlight – " +
+        Text("Uhr-Schriften: Monoton, Bungee (Outline, Hairline), Rampart One, Codystar, Major Mono Display, Megrim, " +
+             "Orbitron, Wallpoet, Rubik Glitch, VT323, Plaster, Bebas Neue, Six Caps, Abril Fatface, Limelight, Fascinate, " +
+             "Shrikhand, Pacifico, Sancreek, Ewert, Nosifer, Fredericka the Great, Londrina Outline – " +
              "© ihre Autorinnen und Autoren (Google Fonts), SIL Open Font License 1.1", color = p.leise, fontSize = 14.sp, lineHeight = 19.sp)
         Spacer(Modifier.height(20.dp))
         UpdateEintrag()

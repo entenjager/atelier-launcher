@@ -91,9 +91,10 @@ object Designs {
 
     /** entfernte Teile aus einem Theme nehmen (Theme-Codes, eigene Themes, alte Einstellungen) */
     fun bereinigen(t: Thema): Thema {
-        if (t.name in THEMEN_RAUS || raus("farben", t.farben)) return grundThema()
+        // 27.10.: Atelier hat keinen eigenen Hintergrund mehr - immer das Hintergrundbild des Handys
+        if (t.name in THEMEN_RAUS || raus("farben", t.farben)) return grundThema().copy(hintergrund = "system")
         return t.copy(
-            hintergrund = if (raus("hintergrund", t.hintergrund)) "schwarz" else t.hintergrund,
+            hintergrund = "system",
             typo = if (raus("typo", t.typo)) "schlicht" else t.typo,
         )
     }
@@ -113,6 +114,18 @@ object Designs {
      *  - schon benutzt (Update): Designs, die gerade benutzt werden, gelten als geladen - nichts verschwindet
      *  - Reste von Greenback / Liquid Glass entfernen
      */
+    private fun neuEinrichten(ctx: Context, z: Zustand) {
+        z.themaStill(bereinigen(grundThema().copy(alphabet = "welle")))
+        z.alphabetMitziehenSetzen(false)
+        z.alphabetTonSetzen(art = "hoch")
+        SeitenRaster.ortSetzen(ctx, start = false)               // # nach links: keine eigene Seite (nur Benachrichtigungen)
+        SeitenRaster.speichern(ctx, listOf(
+            Baustein("uhr", "uhr", 0, 6, 28, 15),
+            Baustein("favoriten", "favoriten", 0, 27, 33, 63),
+            Baustein("alphabet", "alphabet", 33, 26, 6, 63),
+        ), "start")
+    }
+
     fun start(ctx: Context, z: Zustand) {
         val p = prefs(ctx)
         if (!p.contains("designsGeladen")) {
@@ -133,7 +146,7 @@ object Designs {
             }
             geladen = ids
             p.edit().putStringSet("designsGeladen", ids).apply()
-            if (!schonBenutzt) { z.themaStill(grundThema()); return }
+            if (!schonBenutzt) { neuEinrichten(ctx, z); return }
         } else geladen = p.getStringSet("designsGeladen", emptySet())?.toSet() ?: emptySet()
 
         // Reste der entfernten Designs
@@ -141,6 +154,7 @@ object Designs {
         val sauber = bereinigen(t)
         if (sauber != t) z.themaStill(sauber)
         if (raus("laut", LautDesign.art(ctx))) p.edit().putString("lautDesign", "sw").apply()
+        if (SperrMedium.art(ctx) != "") SperrMedium.setzen(ctx, "")       // kein eigenes Sperr-Bild/-Video mehr
         if (raus("sperr", SperrSeite.art(ctx))) SperrSeite.artSetzen(ctx, "karte")
         if (raus("randgeste", Randgesten.stil(p))) Randgesten.stilSetzen(ctx, "strich")
         if (z.alphabetRosette) z.wellenSetzen("alphabetRosette", false)
